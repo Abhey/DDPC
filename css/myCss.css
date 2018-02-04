@@ -1,0 +1,20 @@
+		.convertInputtoBox
+        {
+            background-color: white !important;
+            color: black !important;
+        }
+        .notificationAlert
+        {
+            color : red;
+        }
+        .hiddenList
+        {
+        	display : none;
+        }
+        @media print
+        {    
+            .no-print, .no-print *
+            {
+                display: none !important;
+            }
+        }
