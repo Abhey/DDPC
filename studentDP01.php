@@ -237,12 +237,12 @@
 
                                                     ?>
                                                     <tr>
-                                                    <td rowspan="<?php echo $rnum ?>>
+                                                    <td rowspan="<?php echo $rnum ?>">
                                                         <form method="post">
                                                         <input type="submit" name="submit" value="Forward" reg_no = "<?php echo $thisStudent['reg_no'] ?>" status="pending" progress="ChairmanSDPC" sem_no="<?php echo $sem_no;?>" reg_status="Full-Time"/>
                                                         </form>
                                                     </td>
-                                                    <td rowspan="<?php echo $rnum ?>>
+                                                    <td rowspan="<?php echo $rnum ?>">
                                                         <form method="post">
                                                         <input type="submit" name="submit" value="Don't Forward" reg_no = "<?php echo $thisStudent['reg_no'] ?>" status="denied" progress="HOD" sem_no="<?php echo $sem_no;?>" reg_status="Full-Time"/>
                                                         </form>
