@@ -6,7 +6,7 @@
                                         $thisRole = $_SESSION['role'];
                                         $thisUniqueId = $_SESSION['reg_no'];
                                         $query = "SELECT * FROM notifications WHERE (target_group='$thisRole' OR target_member='$thisUniqueId') AND `read`='0' ORDER BY issue_date DESC";
-                                         //echo $query;
+                                        // echo $query;
                                         // die();
                                         $allNotifications = mysqli_query($connection, $query);
                                         // $count = mysqli_num_rows($allNotifications);

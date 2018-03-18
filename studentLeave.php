@@ -1,5 +1,9 @@
 <?php
-
+/**
+        This file is run when any faculty wants to see any applications to approve.
+        It gives list of all application by  students waiting his/her approval.
+        This file is same for Supervisor,HOD,DDPC Convener etc.
+ **/
     include("./includes/preProcess.php");
     $nextNotifTo = "";
     $supervisor_id = $_SESSION['reg_no'];

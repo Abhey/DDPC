@@ -1,6 +1,6 @@
 <?php
 
-    include("./includes/preProcess.php");
+    require_once("./includes/preProcess.php");
     date_default_timezone_set("Asia/Kolkata");
     $query = "SELECT * FROM courseregistration NATURAL JOIN course WHERE reg_no = '$reg_no' AND sem_no = (SELECT max(sem_no) FROM courseregistration WHERE reg_no='$reg_no')";
     $results = mysqli_query($connection, $query);

@@ -1,4 +1,10 @@
+
 <?php
+/**
+	This file is run via ajax call whenever any person approves the leave.
+ 	It updates the status of leave and sends notification to students accordingly
+ **/
+
 session_start();
 if(!isset($_SESSION['reg_no']))
 {

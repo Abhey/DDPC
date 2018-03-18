@@ -8,6 +8,26 @@
 		return $faculty_name;
 	}
 
+	function getDepartment($reg_no)
+	{
+		include("connect.php");
+		$deptQuery = "SELECT dept_name,dept_id from department WHERE dept_id=(SELECT dept_id from studentmaster where reg_no ='$reg_no')";
+		//echo $deptQuery;
+		$deptResult = mysqli_query($connection, $deptQuery);
+		$deptResult = mysqli_fetch_assoc($deptResult);
+		$dept = $deptResult['dept_name'];
+		return $dept;
+	}
+	function getDepartmentID($reg_no)
+	{
+		include("connect.php");
+		$deptQuery = "SELECT dept_id from studentmaster where reg_no ='$reg_no'";
+		//echo $deptQuery;
+		$deptResult = mysqli_query($connection, $deptQuery);
+		$deptResult = mysqli_fetch_assoc($deptResult);
+		$deptID = $deptResult['dept_id'];
+		return $deptID;
+}
 
 
       function getSupervisor($reg_no){
@@ -18,6 +38,7 @@
 		$faculty_name = $faculty['supervisor1_id'];
 		return $faculty_name;
 	}
+
 
 	// type 1 for individual notification
 	// type 2 for group notification

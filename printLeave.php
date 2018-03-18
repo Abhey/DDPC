@@ -62,7 +62,7 @@
 								<div style="font-size:25px">
 									<center><u>For Official Use</u></center><br>
 									<div class="col-md-offset-1">
-									Recommende/Not Recommended:<br><br>
+									Recommended/Not Recommended:<br><br>
 									</div>
 									<div class="col-md-offset-1"><b>Supervisor(s)</div><br>
 									<div class="col-md-offset-1">Convener DDPC</b></div><br>

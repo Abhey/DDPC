@@ -1,5 +1,9 @@
 <?php
-
+/**
+ 	This is the backend checking of form whenever student submits an application
+ 	The data is verified and sanitized and then inserted in appropriate tables and waited for approval
+ 	The notification is also sent to the supervisors
+ **/
 session_start();
 if(!isset($_SESSION['reg_no']))
 {

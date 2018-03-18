@@ -1,6 +1,6 @@
 	<?php
 
-	include("./includes/preProcess.php");
+	require "./includes/preProcess.php";
 	$prevPageLink = "application.php";
 	$reg_no = $_SESSION['reg_no'];
 	$query = "SELECT * from awarddistribution";
