@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 18, 2018 at 10:21 PM
+-- Generation Time: Mar 26, 2018 at 12:14 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -874,14 +874,19 @@ INSERT INTO `notifications` (`id`, `issue_date`, `description`, `target_group`, 
 (159, '2017-04-12', 'New DP01 application', '', 'mmgore', 0),
 (160, '2017-04-12', 'New DP01 application', '', 'dkyadav', 0),
 (161, '2017-04-12', 'New DP01 application', '', 'divyakumar', 0),
-(162, '2018-03-14', '<a href=\"studentLeave.php\">New leave application</a>', '', 'rsyadav', 0),
-(163, '2018-03-14', '<a href=\"studentLeave.php\">New leave application</a>', '', 'dkyadav', 0),
+(162, '2018-03-14', '<a href=\"studentLeave.php\">New leave application</a>', '', 'rsyadav', 1),
+(163, '2018-03-14', '<a href=\"studentLeave.php\">New leave application</a>', '', 'dkyadav', 1),
 (164, '2018-03-14', '<a href=\"studentStipend.php\">New Stipend Application(2015RCS08)</a>', '', 'aksingh', 1),
 (165, '2018-03-14', '<a href=\"studentStipend.php\">New Stipend Application(2015RCS08)</a>', '', 'aksingh', 1),
 (166, '2018-03-17', '<a href=\"studentStipend.php\">New Stipend Application(2015RCS08)</a>', '', 'aksingh', 0),
 (167, '2018-03-17', '<a href=\"studentLeave.php\">New leave application</a>', '', 'anojkumar', 0),
 (168, '2018-03-17', '<a href=\"studentStipend.php\">New Stipend Application(2015RCS08)</a>', '', 'aksingh', 0),
-(169, '2018-03-18', '<a href=\"studentStipend.php\">New Stipend Application(2015RCS08)</a>', '', 'aksingh', 0);
+(169, '2018-03-18', '<a href=\"studentStipend.php\">New Stipend Application(2015RCS08)</a>', '', 'aksingh', 0),
+(170, '2018-03-23', '<a href=\"studentStipend.php\">New Stipend Application(2015RCS08)</a>', '', 'anojkumar', 1),
+(171, '2018-03-25', '&lt;a href=&quot;supStipend.php?stipend_id=2012RCS03-7-2018&quot;&gt;New Stipend Application(2012RCS', '', 'rsyadav', 0),
+(172, '2018-03-25', '<a href=\"supStipend.php?stipend_id=2012RCS03-7-2018\">New Stipend Application(2012RCS03)</a>', '', 'rsyadav', 1),
+(173, '0000-00-00', '<a href=\"hodStipend.php?stipend_id=2012RCS03-7-2018\">New Stipend Application</a>', '', 'ntyagi', 1),
+(174, '2018-03-26', '<a href=\"printStipend.php?stipendID=2012RCS03-7-2018\">Stipend Application: approved </a>', '', '2012RCS03', 1);
 
 -- --------------------------------------------------------
 
@@ -1081,7 +1086,7 @@ CREATE TABLE `stipend` (
   `stipend_amount` decimal(7,2) NOT NULL,
   `sem` int(11) NOT NULL,
   `status` varchar(30) NOT NULL DEFAULT 'pending',
-  `progress` varchar(50) NOT NULL DEFAULT 'Faculty'
+  `progress` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1089,36 +1094,30 @@ CREATE TABLE `stipend` (
 --
 
 INSERT INTO `stipend` (`stipend_id`, `reg_no`, `month`, `year`, `date_sent`, `stipend_amount`, `sem`, `status`, `progress`) VALUES
-('2015RCS08-2-2018', '2015RCS08', '2', '2018', '2018-03-18', '0.00', 2, 'pending', 'Faculty');
+('2012RCS03-7-2018', '2012RCS03', '7', '2018', '2018-03-25', '15000.00', 9, 'approved', 'DDPC Convener'),
+('2015RCS08-2-2018', '2015RCS08', '2', '2018', '2018-03-23', '20000.00', 3, 'approved', 'DDPC Convener');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stipendddpc`
+-- Table structure for table `stipendhod`
 --
 
-CREATE TABLE `stipendddpc` (
+CREATE TABLE `stipendhod` (
   `vac_availed` varchar(10) NOT NULL COMMENT 'S for Summer, W fro Winter and N for No',
   `vac_leaves` int(11) NOT NULL,
   `unauth_abs` int(11) NOT NULL,
-  `stipend_id` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `stipendfacdetails`
---
-
-CREATE TABLE `stipendfacdetails` (
   `stipend_id` varchar(30) NOT NULL,
-  `work_satisfactory` varchar(10) NOT NULL DEFAULT 'N',
-  `assoc_project` varchar(10) NOT NULL DEFAULT 'N',
-  `special_remarks` varchar(100) NOT NULL,
-  `date` date NOT NULL,
-  `remark_sup` varchar(200) NOT NULL,
-  `date_sup` date NOT NULL
+  `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `stipendhod`
+--
+
+INSERT INTO `stipendhod` (`vac_availed`, `vac_leaves`, `unauth_abs`, `stipend_id`, `date`) VALUES
+('N', 1, 0, '2015RCS08-2-2018', '2018-03-25'),
+('W', 5, 1, '2012RCS03-7-2018', '2018-03-26');
 
 -- --------------------------------------------------------
 
@@ -1145,7 +1144,32 @@ CREATE TABLE `stipendstuddetails` (
 --
 
 INSERT INTO `stipendstuddetails` (`stipend_id`, `faculty_id`, `lecture`, `tut`, `prac`, `lib_work`, `comp_work`, `research_work`, `other`, `hours_per_week`, `details`) VALUES
-('2015RCS08-2-2018', 'aksingh', '8', '11', '1', '23', '12', '25', '', 154, 'bzmfb');
+('2012RCS03-7-2018', 'rsyadav', '10', '11', '12', '13', '15', '14', '', 50, 'Data Analysis'),
+('2015RCS08-2-2018', 'anojkumar', '12', '10', '11', '13', '11', '20', '', 67, 'No details');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `stipendsupdetails`
+--
+
+CREATE TABLE `stipendsupdetails` (
+  `stipend_id` varchar(30) NOT NULL,
+  `work_satisfactory` varchar(10) NOT NULL DEFAULT 'N',
+  `assoc_project` varchar(10) NOT NULL DEFAULT 'N',
+  `special_remarks` varchar(100) NOT NULL,
+  `date` date NOT NULL,
+  `remark_sup` varchar(200) NOT NULL,
+  `date_sup` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `stipendsupdetails`
+--
+
+INSERT INTO `stipendsupdetails` (`stipend_id`, `work_satisfactory`, `assoc_project`, `special_remarks`, `date`, `remark_sup`, `date_sup`) VALUES
+('2012RCS03-7-2018', 'Yes', 'Yes', 'No Remarks', '2018-03-25', 'No remarks', '2018-03-25'),
+('2015RCS08-2-2018', 'Yes', 'Yes', 'No remarks', '2018-03-25', 'No Remarks', '2018-03-25');
 
 -- --------------------------------------------------------
 
@@ -1755,21 +1779,21 @@ ALTER TABLE `stipend`
   ADD UNIQUE KEY `stipend_unique` (`reg_no`,`month`,`year`);
 
 --
--- Indexes for table `stipendddpc`
+-- Indexes for table `stipendhod`
 --
-ALTER TABLE `stipendddpc`
+ALTER TABLE `stipendhod`
   ADD KEY `stipend_id` (`stipend_id`);
-
---
--- Indexes for table `stipendfacdetails`
---
-ALTER TABLE `stipendfacdetails`
-  ADD PRIMARY KEY (`stipend_id`);
 
 --
 -- Indexes for table `stipendstuddetails`
 --
 ALTER TABLE `stipendstuddetails`
+  ADD PRIMARY KEY (`stipend_id`);
+
+--
+-- Indexes for table `stipendsupdetails`
+--
+ALTER TABLE `stipendsupdetails`
   ADD PRIMARY KEY (`stipend_id`);
 
 --
@@ -1878,22 +1902,22 @@ ALTER TABLE `othercourses`
   ADD CONSTRAINT `othercourses_ibfk_2` FOREIGN KEY (`course_id`) REFERENCES `course` (`course_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `stipendddpc`
+-- Constraints for table `stipendhod`
 --
-ALTER TABLE `stipendddpc`
-  ADD CONSTRAINT `stipendddpc_ibfk_1` FOREIGN KEY (`stipend_id`) REFERENCES `stipend` (`stipend_id`);
-
---
--- Constraints for table `stipendfacdetails`
---
-ALTER TABLE `stipendfacdetails`
-  ADD CONSTRAINT `stipendfacdetails_ibfk_1` FOREIGN KEY (`stipend_id`) REFERENCES `stipend` (`stipend_id`) ON UPDATE CASCADE;
+ALTER TABLE `stipendhod`
+  ADD CONSTRAINT `stipendhod_ibfk_1` FOREIGN KEY (`stipend_id`) REFERENCES `stipend` (`stipend_id`);
 
 --
 -- Constraints for table `stipendstuddetails`
 --
 ALTER TABLE `stipendstuddetails`
   ADD CONSTRAINT `stipendstuddetails_ibfk_1` FOREIGN KEY (`stipend_id`) REFERENCES `stipend` (`stipend_id`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `stipendsupdetails`
+--
+ALTER TABLE `stipendsupdetails`
+  ADD CONSTRAINT `stipendsupdetails_ibfk_1` FOREIGN KEY (`stipend_id`) REFERENCES `stipend` (`stipend_id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `supervisorhistory`
