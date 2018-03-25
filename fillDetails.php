@@ -1,5 +1,4 @@
 	<?php
-
 		include("./includes/preProcess.php");
 	    $prevPageLink = "dashboard.php";
 
@@ -8,11 +7,19 @@
 	    $s_result = mysqli_query($connection, $s_query);
 	    if(mysqli_num_rows($s_result) >= 1){
 	    	$_SESSION['supervisor'] = 1;
+		    $isSup = true;
 	    }
 	    else{
 	    	$_SESSION['supervisor'] = 0;
+		    $isSup = false;
 	    }
-		
+
+	$isHOD = false;
+	$hodQuery = "Select member_id  from members where role='HOD' ";
+	$hod = mysqli_fetch_assoc(mysqli_query($connection,$hodQuery));
+	$hod  = $hod['member_id'];
+	if($supervisor_id == $hod)
+		$isHOD = true;
 	?>
 
 	<!doctype html>
@@ -97,10 +104,47 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 							<div class="col-md-6">
 							<h4>Fill details for:</h4>
 							<ol style="font-size:25px;">
-								<li><a href="studentListFull.php?form=03"> Fill Semester Progress Report of a Candidate (DP-03)</a></li>
-								<li><a href="studentListFull.php?form=09"> Fill Report of Examiners of Comprehensive Examination (DP-09)</a></li>
-								<li><a href="studentListFull.php?form=10"> Fill Report of Examiners of the State of the Art Seminar (DP-10)</a></li>
-								<li><a href="studentListFull.php?form=11"> Fill Report of Open Seminar (DP-11)</a></li>
+                                                                <?php if($_SESSION["role"]=="ConvenerDDPC") { ?>
+                                                                        <li><a href="studentListFull.php?form=03"> Fill
+                                                                                        Semester Progress Report of a
+                                                                                        Candidate (DP-03)</a></li>
+                                                                        <li><a href="studentListFull.php?form=09"> Fill
+                                                                                        Report of Examiners of
+                                                                                        Comprehensive Examination
+                                                                                        (DP-09)</a></li>
+                                                                        <li><a href="studentListFull.php?form=10"> Fill
+                                                                                        Report of Examiners of the State
+                                                                                        of the Art Seminar (DP-10)</a>
+                                                                        </li>
+                                                                        <li><a href="studentListFull.php?form=11"> Fill
+                                                                                        Report of Open Seminar
+                                                                                        (DP-11)</a></li>
+									<?php if($isSup)
+									{ ?>
+									<li><a href="studentStipendSup.php">Fill Stipend Details of Students</a></li>
+								<?php }
+								 }
+								else if($isHOD)
+								{
+									if ($isSup)
+									{ ?>
+										<li><a href="studentStipendSup.php">Fill Stipend Details of
+												Students (As
+												Supervisor)</a></li>
+										<li><a href="studentStipendHOD.php">Fill Stipend Details of
+												Students (As HOD)</a>
+										</li>
+									<?php }
+									else{ ?>
+
+										<li><a href="studentStipendHOD.php">Fill Stipend Details of
+												Students</a>
+										</li>
+									<?php }
+								} else if($isSup)
+								{ ?>
+                                                                <li><a href="studentStipendSup.php">Fill Stipend Details of Students</a></li>
+                                                                <?php }?>
 
 							</ol>
 							

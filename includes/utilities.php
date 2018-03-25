@@ -1,4 +1,11 @@
 <?php
+	function getStudentName($reg_no)
+	{
+		include ("connect.php");
+		$query = "SELECT name from studentmaster where reg_no = '$reg_no'";
+		$queryResult = mysqli_fetch_assoc(mysqli_query($connection,$query));
+		return $queryResult['name'];
+	}
 	function getFacultyName($faculty_id){
 		include("connect.php");
 		$query = "SELECT name FROM faculty WHERE faculty_id ='$faculty_id'";

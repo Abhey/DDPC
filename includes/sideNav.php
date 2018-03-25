@@ -113,7 +113,7 @@
                     }
                     else{
                         $_SESSION['supervisor'] = 0;
-                    }  
+                    }
                     if (!strcmp($_SESSION['role'], "student") OR $_SESSION['supervisor'])
                     {  
                         // if(! strcmp($currentTab, "uploadDocument"))
@@ -249,6 +249,18 @@
                                 <p>Approve Applications</p>
                             </a>
                         </li>
+                            <?php
+                            if(!strcmp($currentTab, "fillDetails"))
+                                    echo "<li class=\"active\">";
+                            else
+                                    echo "<li>";
+
+                            ?>
+                            <a href="fillDetails.php">
+                                    <i class="ti-layout-list-thumb"></i>
+                                    <p>Fill Details</p>
+                            </a>
+                            </li>
 
                 <?php
                     }
@@ -278,18 +290,6 @@
                             <p>Reports</p>
                         </a>
                     </li>
-                <?php
-                    if(!strcmp($currentTab, "fillDetails"))
-                            echo "<li class=\"active\">"; 
-                        else
-                            echo "<li>";
-                        
-                ?>
-                        <a href="fillDetails.php">
-                            <i class="ti-layout-list-thumb"></i>
-                            <p>Fill Details</p>
-                        </a>
-                    </li>   
                 <?php
                     }
                 }

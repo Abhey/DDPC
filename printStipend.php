@@ -6,25 +6,26 @@
  * Time: 3:19 AM
  */
 
+/**
+ * Front end can be made more impressive
+ */
+
     include("./includes/preProcess.php");
     require_once ("./includes/utilities.php");
     date_default_timezone_set("Asia/Kolkata");
 
    // Getting the data
-        $stipendID = htmlentities(stripslashes(trim($_REQUEST['stipendID'])));
-        $stipendQuery = "select * from stipend where stipend_id = '$stipendID'";
-        $stipendResult = mysqli_query($connection,$stipendQuery);
-        $stipendResult = mysqli_fetch_assoc($stipendResult);
 
-        $studQuery = "select * from stipendstuddetails where stipend_id = '$stipendID'";
-        $studResult = mysqli_query($connection,$studQuery);
-        $studResult = mysqli_fetch_assoc($studResult);
+$stipendID = htmlentities(stripslashes(trim($_REQUEST['stipendID'])));
+$stipendQuery = "select * from stipend where stipend_id = '$stipendID'";
+$stipendResult = mysqli_query($connection,$stipendQuery);
+$stipendResult = mysqli_fetch_assoc($stipendResult);
 
-        // Finding Department
+$studQuery = "select * from stipendstuddetails where stipend_id = '$stipendID'";
+$studResult = mysqli_query($connection,$studQuery);
+$studResult = mysqli_fetch_assoc($studResult);
+// Finding Department
        $dept = getDepartment($reg_no);
-
-
-
 
 
 ?>
@@ -76,6 +77,18 @@
                                         <br>
                                         <center><h3><b>Motilal Nehru National Institute of Technology Allahabad</b></h3></center>
                                         <center><u><h3>Stipend Application</h3></u></center>
+                                        <?php if($stipendResult['status']=='pending'){ ?>
+                                        <center><div class="text text-info"><h3>Not Approved Yet</h3></div></center>
+                                        <?php }
+                                                else if($stipendResult['status']=='approved'){
+                                                        ?>
+                                        <center><div class="text text-success"><h3>Approved </h3></div></center>
+                                        <?php }
+                                                else if($stipendResult['status']=='declined'){
+                                                        ?>
+                                        <center><div class="text text-danger"><h3>Rejected</h3></div></center>
+                                        <?php
+                                        } ?>
                                         <br><center><h4><b><u>Head of the Department</u></b></h4></center><br><br>
                                         <form class="form form-horizontal" id="stipend">
                                                 <div class="row">
@@ -182,18 +195,18 @@
                                                 $sup_remarks = "Not Filled Yet";
                                                 $sup_date = "Not Filled Yet";
 
-                                                $checkQuery = "SELECT * from stipendfacdetails where stipend_id = (Select stipend_id from stipend where reg_no = '$reg_no')";
+                                                $checkQuery = "SELECT * from stipendsupdetails where stipend_id = (Select stipend_id from stipend where reg_no = '$reg_no')";
                                                 $checkResult = mysqli_query($connection,$checkQuery);
                                                 if(mysqli_num_rows($checkResult)>0)
                                                 {
                                                         $checkResult = mysqli_fetch_assoc($checkResult);
-                                                        $work_sat = $checkResult['work_sat'];
+                                                        $work_sat = $checkResult['work_satisfactory'];
                                                         $assoc_project = $checkResult['assoc_project'];
-                                                        $special_remarks = $checkQuery['special_remarks'];
-                                                        $date = $checkQuery['date'];
+                                                        $special_remarks = $checkResult['special_remarks'];
+                                                        $date = $checkResult['date'];
                                                         $sup_remarks = $checkResult['remark_sup'];
-                                                        $supDate = $checkResult['date_sup'];
-                                                        if($supDate=="0000-00-00")
+                                                        $sup_date = $checkResult['date_sup'];
+                                                        if($sup_date=="0000-00-00")
                                                         {
                                                                 $sup_remarks = "Not Filled Yet";
                                                                 $sup_date = "Not Filled Yet";
@@ -234,13 +247,13 @@
 
                                                 <?php
                                                 //Getting name of supervisor
-                                                $sup_name = getSupervisor($reg_no);
+                                                $sup_id = getSupervisor($reg_no);
                                                 ?>
 
                                                 <div class="row">
                                                         <div class="form-group"  style="margin-left: 2%">
                                                                 <label class="control-label col-md-5" for="name">Name of the Thesis Supervisor:</label>
-                                                                <p class="form-control-static col-md-3"><?= getFacultyName($sup_name)?></p>
+                                                                <p class="form-control-static col-md-3"><?= getFacultyName($sup_id)?></p>
                                                         </div>
                                                 </div>
                                                 <div class="row">
@@ -256,7 +269,7 @@
                                                                 <p class="form-control-static col-md-6"><?= $sup_date?></p>
                                                         </div>
                                                 </div>
-<!-------------------------------------------- To be completed by DDPC------------------------------------------------->
+<!-------------------------------------------- To be completed by HOD------------------------------------------------->
                                                 <h4 align="center"><u>(D) To be Completed by the Departmental Office</u></h4>
                                                 <?php
                                                         //Getting the Required Values from database
@@ -267,10 +280,13 @@
                                                         $casLeaveQuery = "SELECT month(from_date) \"Month\",sum(`no_of_days`) \"Total Days\" from `leave` where `reg_no`='$reg_no' and `sem_no` = ".$stipendResult['sem']." and `academic_year`=". $stipendResult['year']." and `leave_type` = 3 and `status`='approved' having Month = '".$stipendResult['month']."'";
 
                                                         $casLeaveResult = mysqli_query($connection,$casLeaveQuery);
-                                                        if(mysqli_num_rows($casLeaveResult)>0)
+                                                        if($casLeaveResult)
                                                         {
-                                                                $casLeaveResult = mysqli_fetch_assoc($casLeaveResult);
-                                                                $cl = $casLeaveResult['Total Days'];
+                                                                if(mysqli_num_rows($casLeaveResult)>0)
+                                                                {
+                                                                        $casLeaveResult = mysqli_fetch_assoc($casLeaveResult);
+                                                                        $cl = $casLeaveResult['Total Days'];
+                                                                }
                                                         }
 
 
@@ -287,21 +303,23 @@
                                                         $vac_availed = "Not Filled Yet";
                                                         $vac_days = "Not Filled Yet";
                                                         $stipend_amount = "Not Filled Yet";
-                                                        $ddpcQuery = "select * from stipendddpc where stipend_id='$stipendID'";
-                                                        $ddpcresult = mysqli_query($connection,$ddpcQuery);
-                                                        if(mysqli_num_rows($ddpcresult)>0)
+                                                        $hod_date = "Not Filled Yet";
+                                                        $hodQuery = "select * from stipendhod where stipend_id='$stipendID'";
+                                                        $hodresult = mysqli_query($connection,$hodQuery);
+                                                        if(mysqli_num_rows($hodresult)>0)
                                                         {
-                                                                $ddpcresult = mysqli_fetch_assoc($ddpcresult);
-                                                                $unauth_days = $ddpcresult['unauth_abs'];
-                                                                $vac_availed = $ddpcresult['vac_availed'];
+                                                                $hodresult = mysqli_fetch_assoc($hodresult);
+                                                                $unauth_days = $hodresult['unauth_abs'];
+                                                                $vac_availed = $hodresult['vac_availed'];
                                                                 if($vac_availed="W")
                                                                         $vac_availed = "Winter Vacation";
                                                                 if($vac_availed="S")
                                                                         $vac_availed = "Summer Vacation";
                                                                 if($vac_availed="N")
                                                                         $vac_availed = "No Vacation";
-                                                                $vac_days = $ddpcresult['vac_leaves'];
+                                                                $vac_days = $hodresult['vac_leaves'];
                                                                 $stipend_amount = $stipendResult['stipend_amount'];
+                                                                $hod_date = $hodresult['date'];
 
                                                         }
 
@@ -348,11 +366,12 @@
                                                 <div class="row">
                                                         <div class="form-group col-md-5">
                                                                 <label class="control-label col-md-6">Date:</label>
-                                                                <p class="form-control-static col-md-6"><?= $sup_date?></p>
+                                                                <p class="form-control-static col-md-6"><?= $hod_date?></p>
                                                         </div>
                                                 </div>
 
                                         </form>
+
 
 
                                         <br>

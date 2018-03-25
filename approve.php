@@ -5,11 +5,12 @@
 	$reg_no = $_SESSION['reg_no'];
 	$s_query = "Select role from members WHERE member_id = '$reg_no'";
     $s_result = mysqli_query($connection, $s_query);
+
+// Deciding what role does this reg_no play. Like chairman SDPC, hod, ddpc convener, supervisor, or simply faculty.
     $role_array = array();
     while($s_row = mysqli_fetch_array($s_result))
-    {
         array_push($role_array, $s_row['role']);
-    }
+
 	$s_query = "Select * from currentsupervisor WHERE supervisor1_id = '$reg_no' OR supervisor2_id = '$reg_no'";
     $s_result = mysqli_query($connection, $s_query);
     if(mysqli_num_rows($s_result) >= 1){
@@ -118,8 +119,13 @@
 								<li><a href="studentDP15.php"> Approve Examiner Panel for Ph.D Thesis Evaluation Board</a></li>
 							<?php
 							}
- 
-							?>
+							if(in_array("ConvenerDDPC", $role_array)){
+								?>
+								<li><a href="studentStipendDDPC.php">Approve Stipend Applications</a></li>
+								<?php
+								}
+
+								?>
 							</ol>
 			<footer class="footer">
 			</footer>

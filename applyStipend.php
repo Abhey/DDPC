@@ -141,7 +141,7 @@ if ( !strcmp($_SESSION['role'], "student") )
                                     <label class="control-label col-md-2" for="month">Month: </label>
                                     <div class="col-md-4">
                                         <select  class="form-control" style="border: solid black 1px"  id="month" name="month">
-                                            <?php  for($i=1;$i<date("m")+1;$i++)
+                                            <?php  for($i=1;$i<13;$i++)
                                                 echo "<option value='$i'> $i</option>" ?>
                                         </select>
                                     </div>
@@ -163,19 +163,7 @@ if ( !strcmp($_SESSION['role'], "student") )
                                 <div class="row">
                                     <div class="form-group col-md-12">
                                         <label class="control-label col-md-4" for="fac_mem">Faculty Member with whom associated:</label>
-                                        <div class="col-md-6">
-                                            <select id="fac_mem" class="form-control" style=" border: solid black 1px;" name="faculty">
-                                                <?php
-                                                //Finding list of faculties in this department
-                                                $facultyQuery = "SELECT `faculty_id`,`name` from faculty where dept_id='$deptID';";
-                                                echo $facultyQuery;
-                                                $facultyResult = mysqli_query($connection,$facultyQuery);
-                                                        while(mysqli_num_rows($facultyResult) !=0 && $thisFaculty = mysqli_fetch_assoc($facultyResult))
-                                                        {
-                                                            ?>
-                                                    <option value="<?= $thisFaculty['faculty_id'] ?>"><?= $thisFaculty['name']?></option>
-                                                <?php }?>
-                                            </select>
+                                            <p class="form-control-static col-md-8"><?= getFacultyName(getSupervisor($thisUniqueId)) ?></p>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-12">
@@ -243,7 +231,6 @@ if ( !strcmp($_SESSION['role'], "student") )
                                         </div>
                                     </div>
                                     <input required type="hidden" value="<?php echo date("Y-m-d");?>" name="date">
-                                </div>
                                 <div class="row">
                                     <div class="form-group col-md-5">
                                         <label class="control-label col-md-6">Date:</label>
@@ -255,6 +242,9 @@ if ( !strcmp($_SESSION['role'], "student") )
                                     <button type="submit" class="btn btn-info btn-fill btn-wd" id="Apply">Apply</button>
                                 </div>
                             </form>
+                            <br>
+                            <br>
+                        </div>
 
                             <br>
                         </div>
