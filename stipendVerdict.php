@@ -46,7 +46,7 @@ if (!$res)
         $query = "INSERT INTO notifications (`id`, `description`, `issue_date`, `target_group`, `target_member`) VALUES('$newNotificationId', '$description', '$issue_date', '$target_group', '$target_member')";
         $result = mysqli_query($connection, $query);
         echo '<script>alert("Submitted Successfully");
-                         window.location="./studentStipendDDPC.php";
+                         window.location="studentStipendHOD.php";
                 </script>';
         exit();
 }

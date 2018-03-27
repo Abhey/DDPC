@@ -6,6 +6,10 @@
  * Time: 10:21 PM
  */
 
+
+/***
+ * Gathering the data and inserting it to the table and updating the progress
+ */
 session_start();
 if(!isset($_SESSION['reg_no']))
 {
@@ -31,7 +35,7 @@ $date = trim(htmlentities(stripslashes($_POST['date'])));
 $stipend_amt = trim(htmlentities(stripslashes($_POST['stipend_amt'])));
 
 //Query for DDPC
-$ddpcQuery = "Select member_id  from members where role='DDPC Convener' ";
+$ddpcQuery = "Select member_id  from members where role='HOD' ";
 $nextNotifTo = mysqli_fetch_assoc(mysqli_query($connection,$ddpcQuery));
 $nextNotifTo  = $nextNotifTo['member_id'];
 
@@ -46,7 +50,7 @@ $upResult = mysqli_query($connection,$upQuery);
 if(!$upResult)
         echo ("Unsuccessful. Try Again <br>".mysqli_error($connection));
 
-$upQuery = "update stipend set `progress` = 'DDPC Convener' where stipend_id='$stipend_id';";
+$upQuery = "update stipend set `progress` = 'HOD' where stipend_id='$stipend_id';";
 $upResult  = mysqli_query($connection,$upQuery);
 if(!$upResult)
         echo ("Unsuccessful. Try Again <br>".mysqli_error($connection));
@@ -69,7 +73,7 @@ if (!$upResult)
         $allnotifications = mysqli_query($connection, $query);
         $notificationsCount = mysqli_num_rows($allnotifications);
         $newNotificationId = $notificationsCount + 1;
-        $description = "<a href='ddpcStipend.php?stipend_id=$stipend_id'>New Stipend Application</a>";
+        $description = "<a href=\"hodStipend.php?stipend_id=$stipend_id\">New Stipend Application</a>";
         $issue_date = date("Y-m-d");
         $target_group = "";
         $target_member = $nextNotifTo;
@@ -77,7 +81,7 @@ if (!$upResult)
         $query = "INSERT INTO notifications (`id`, `description`, `issue_date`, `target_group`, `target_member`) VALUES('$newNotificationId', '$description', '$issue_date', '$target_group', '$target_member')";
         $result = mysqli_query($connection, $query);
         echo '<script>alert("Submitted Successfully");
-                         window.location="./studentStipendHOD.php";
+                         window.location="studentStipendDDPC.php";
                 </script>';
         exit();
 }

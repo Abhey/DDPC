@@ -119,29 +119,23 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
                                                                         <li><a href="studentListFull.php?form=11"> Fill
                                                                                         Report of Open Seminar
                                                                                         (DP-11)</a></li>
-									<?php if($isSup)
+									<?php if ($isSup)
 									{ ?>
-									<li><a href="studentStipendSup.php">Fill Stipend Details of Students</a></li>
+									<li><a href="studentStipendSup.php">Fill Stipend Details of
+											Students (As
+											Supervisor)</a></li>
+									<li><a href="studentStipendDDPC.php">Fill Stipend Details of
+											Students (As DDPC)</a>
+									</li>
 								<?php }
-								 }
-								else if($isHOD)
-								{
-									if ($isSup)
-									{ ?>
-										<li><a href="studentStipendSup.php">Fill Stipend Details of
-												Students (As
-												Supervisor)</a></li>
-										<li><a href="studentStipendHOD.php">Fill Stipend Details of
-												Students (As HOD)</a>
-										</li>
-									<?php }
 									else{ ?>
 
-										<li><a href="studentStipendHOD.php">Fill Stipend Details of
+										<li><a href="studentStipendDDPC.php">Fill Stipend Details of
 												Students</a>
 										</li>
 									<?php }
-								} else if($isSup)
+								 }
+								 else if($isSup)
 								{ ?>
                                                                 <li><a href="studentStipendSup.php">Fill Stipend Details of Students</a></li>
                                                                 <?php }?>

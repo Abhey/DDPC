@@ -195,8 +195,10 @@ $studResult = mysqli_fetch_assoc($studResult);
                                                 $sup_remarks = "Not Filled Yet";
                                                 $sup_date = "Not Filled Yet";
 
-                                                $checkQuery = "SELECT * from stipendsupdetails where stipend_id = (Select stipend_id from stipend where reg_no = '$reg_no')";
+                                                $checkQuery = "SELECT * from stipendsupdetails where stipend_id = '$stipendID'";
                                                 $checkResult = mysqli_query($connection,$checkQuery);
+                                                if(!$checkResult)
+                                                        echo "Unsuccessful Try Again".mysqli_error($connection);
                                                 if(mysqli_num_rows($checkResult)>0)
                                                 {
                                                         $checkResult = mysqli_fetch_assoc($checkResult);

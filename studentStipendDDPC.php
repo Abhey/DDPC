@@ -2,14 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: JAshMe
- * Date: 3/26/2018
- * Time: 1:38 AM
+ * Date: 3/25/2018
+ * Time: 7:41 PM
  */
-
 
 include("./includes/preProcess.php");
 $nextNotifTo = "";
-$ddpc_id = $_SESSION['reg_no'];
+$hod_id = $_SESSION['reg_no'];
 $prevPageLink = "fillDetails.php";
 
 ?>
@@ -140,7 +139,7 @@ $prevPageLink = "fillDetails.php";
                                                                                         </td>
                                                                                         <td>
                                                                                                 <?php
-                                                                                                if ($thisApp['status'] == "0.00")
+                                                                                                if ($thisApp['status'] == "pending")
                                                                                                         echo "Not Filled Yet";
                                                                                                 else
                                                                                                         echo $thisApp['stipend_amount']; ?>
@@ -150,7 +149,7 @@ $prevPageLink = "fillDetails.php";
                                                                                         </td>
                                                                                         <td>
                                                                                                 <form method="post" action="ddpcStipend.php">
-                                                                                                        <input type="submit" name="submit" value="View">
+                                                                                                        <input type="submit" name="submit" value="Fill">
                                                                                                         <input type="hidden" name="stipend_id" value="<?php echo $thisApp['stipend_id'] ?>"/>
                                                                                                 </form>
                                                                                         </td>
@@ -161,7 +160,6 @@ $prevPageLink = "fillDetails.php";
                                                                                 <?php
                                                                         }
                                                                         ?>
-
                                                                         </tbody>
                                                                 </table>
                                                         </div>

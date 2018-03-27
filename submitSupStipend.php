@@ -37,7 +37,7 @@ $remark_sup = trim(stripslashes(htmlentities($_POST['remarks_sup'])));
 $s_date = trim(stripslashes(htmlentities($_POST['s-date'])));
 
 //Query for HOD
-$hodQuery = "Select member_id  from members where role='HOD' ";
+$hodQuery = "Select member_id  from members where role='ConvenerDDPC'";
 $nextNotifTo = mysqli_fetch_assoc(mysqli_query($connection,$hodQuery));
 $nextNotifTo  = $nextNotifTo['member_id'];
 
@@ -70,15 +70,15 @@ if (!$upResult)
         $allnotifications = mysqli_query($connection, $query);
         $notificationsCount = mysqli_num_rows($allnotifications);
         $newNotificationId = $notificationsCount + 1;
-        $description = "<a href=\"hodStipend.php?stipend_id=$stipendID\">New Stipend Application</a>";
+        $description = " <a href=\"ddpcStipend.php?stipend_id=$stipendID\">New Stipend Application</a>;";
         $issue_date = date("Y-m-d");
         $target_group = "";
         $target_member = $nextNotifTo;
 
         $query = "INSERT INTO notifications (`id`, `description`, `issue_date`, `target_group`, `target_member`) VALUES('$newNotificationId', '$description', '$issue_date', '$target_group', '$target_member')";
         $result = mysqli_query($connection, $query);
-        echo '<script>alert("Stipend Filled Successfully");
-        window.location= "./studentStipendSup.php";
-        )</script>';
+        echo '<script>alert("Filled Successfully");
+                         window.location="./studentStipendSup.php";
+                </script>';
         exit();
 }

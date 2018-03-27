@@ -2,13 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: JAshMe
- * Date: 3/25/2018
- * Time: 7:41 PM
+ * Date: 3/26/2018
+ * Time: 1:38 AM
  */
+
 
 include("./includes/preProcess.php");
 $nextNotifTo = "";
-$hod_id = $_SESSION['reg_no'];
+$ddpc_id = $_SESSION['reg_no'];
 $prevPageLink = "fillDetails.php";
 
 ?>
@@ -139,7 +140,7 @@ $prevPageLink = "fillDetails.php";
                                                                                         </td>
                                                                                         <td>
                                                                                                 <?php
-                                                                                                if ($thisApp['status'] == "pending")
+                                                                                                if ($thisApp['status'] == "0.00")
                                                                                                         echo "Not Filled Yet";
                                                                                                 else
                                                                                                         echo $thisApp['stipend_amount']; ?>
@@ -149,7 +150,7 @@ $prevPageLink = "fillDetails.php";
                                                                                         </td>
                                                                                         <td>
                                                                                                 <form method="post" action="hodStipend.php">
-                                                                                                        <input type="submit" name="submit" value="Fill">
+                                                                                                        <input type="submit" name="submit" value="View">
                                                                                                         <input type="hidden" name="stipend_id" value="<?php echo $thisApp['stipend_id'] ?>"/>
                                                                                                 </form>
                                                                                         </td>

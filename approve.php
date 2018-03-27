@@ -119,9 +119,9 @@
 								<li><a href="studentDP15.php"> Approve Examiner Panel for Ph.D Thesis Evaluation Board</a></li>
 							<?php
 							}
-							if(in_array("ConvenerDDPC", $role_array)){
+							if(in_array("HOD", $role_array)){
 								?>
-								<li><a href="studentStipendDDPC.php">Approve Stipend Applications</a></li>
+								<li><a href="studentStipendHOD.php">Approve Stipend Applications</a></li>
 								<?php
 								}
 
