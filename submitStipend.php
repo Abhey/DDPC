@@ -35,35 +35,50 @@ $comp =trim(stripslashes(htmlentities($_POST['comp'])));
 $other=trim(stripslashes(htmlentities($_POST['other'])));
 $hours=trim(stripslashes(htmlentities($_POST['hours'])));
 $details=trim(stripslashes(htmlentities($_POST['details'])));
-$date=trim(stripslashes(htmlentities($_POST['date'])));
+$date=date("Y-m-d");
 $year=date("Y");
 $nextNotifTo = getSupervisor($reg_no);
 
 
 $error = 0;
-if(!checkHours($hours))
-        $error =1;
+$max_hours = 480;
+
+if(empty($lec) && $lec > $max_hours)
+    $lec = 0;
+if(empty($tut) && $tut > $max_hours)
+    $tut = 0;
+if(empty($prac) && $prac > $max_hours)
+    $prac = 0;
+if(empty($lib_work) && $lib_work > $max_hours)
+    $lib_work = 0;
+if(empty($research) && $research > $max_hours)
+    $research = 0;
+if(empty($comp) && $comp > $max_hours)
+    $comp = 0;
+
+if(!checkValidity($lec, $tut, $prac, $lib_work, $research, $comp, $hours))
+        $error = 1;
 
 
 if($error)
 {
-        echo '<script>alert("Incorrect Hours Entered..")</script>';
-        header("location: applyStipend.php");
+        echo '<script>alert("Incorrect Hours Entered .....");
+                         window.location="./applyStipend.php";
+              </script>';
 }
+else{
+    //Inserting Data
+    $stipendID = $reg_no."-".$month."-".$year;
+    $query = "INSERT INTO `stipend` (`stipend_id`,`reg_no`, `month`, `year`, `date_sent`, `sem`, `progress`)VALUES ('$stipendID','$reg_no', '$month', '$year', '$date', '$sem', 'Supervisor')";
+    $result = mysqli_query($connection, $query);
 
+    $query1 = "insert into stipendstuddetails (stipend_id,faculty_id,lecture,tut,prac,lib_work,comp_work,research_work,other,hours_per_week,details) VALUES ('$stipendID','$nextNotifTo','$lec','$tut','$prac','$lib_work','$comp','$research','$other','$hours','$details');";
+    $result1 = mysqli_query($connection,$query1);
 
-//Inserting Data
-$stipendID = $reg_no."-".$month."-".$year;
-$query = "INSERT INTO `stipend` (`stipend_id`,`reg_no`, `month`, `year`, `date_sent`, `sem`, `progress`)VALUES ('$stipendID','$reg_no', '$month', '$year', '$date', '$sem', 'Supervisor')";
-$result = mysqli_query($connection, $query);
-
-$query1 = "insert into stipendstuddetails (stipend_id,faculty_id,lecture,tut,prac,lib_work,comp_work,research_work,other,hours_per_week,details) VALUES ('$stipendID','$nextNotifTo','$lec','$tut','$prac','$lib_work','$comp','$research','$other','$hours','$details');";
-$result1 = mysqli_query($connection,$query1);
-
-if (!$result)
-{
+    if (!$result)
+    {
         die("Unsuccessful. Try Again <br>".mysqli_error($connection));
-} else {
+    } else {
 
         //Sending Notification
         $query = "SELECT * FROM notifications";
@@ -81,4 +96,5 @@ if (!$result)
                          window.location="./printStipend.php?stipendID='.$stipendID.'";
                 </script>';
         exit();
+    }
 }

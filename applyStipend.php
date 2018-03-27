@@ -174,19 +174,19 @@ if ( !strcmp($_SESSION['role'], "student") )
                                     <div class="form-group col-md-4">
                                         <label class="control-label col-md-6" for="lec">Lecture:</label>
                                         <div class="col-md-6">
-                                            <input required type="text" id="lec" class="form-control" style=" border: solid black 1px;" name="lec">
+                                            <input type="text" id="lec" class="form-control" style=" border: solid black 1px;" name="lec" value="0">
                                         </div>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label class="control-label col-md-6" for="tut">Tutorial:</label>
                                         <div class="col-md-6">
-                                            <input required type="text" id="tut" class="form-control" style=" border: solid black 1px;" name="tut">
+                                            <input type="text" id="tut" class="form-control" style=" border: solid black 1px;" name="tut" value="0">
                                         </div>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label class="control-label col-md-6" for="prac">Practical:</label>
                                         <div class="col-md-6">
-                                            <input required type="text" id="prac" class="form-control" style=" border: solid black 1px;" name="prac">
+                                            <input type="text" id="prac" class="form-control" style=" border: solid black 1px;" name="prac" value="0">
                                         </div>
                                     </div>
                                     </div>
@@ -194,19 +194,19 @@ if ( !strcmp($_SESSION['role'], "student") )
                                         <div class="form-group col-md-4">
                                             <label class="control-label col-md-6" for="lib_work">Library Work:</label>
                                             <div class="col-md-6">
-                                                <input required type="text" id="lib_work" class="form-control" style=" border: solid black 1px;" name="lib_work">
+                                                <input type="text" id="lib_work" class="form-control" style=" border: solid black 1px;" name="lib_work" value="0">
                                             </div>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label class="control-label col-md-6" for="research">Research Work:</label>
                                             <div class="col-md-6">
-                                                <input required type="text" id="research" class="form-control" style=" border: solid black 1px;" name="research">
+                                                <input type="text" id="research" class="form-control" style=" border: solid black 1px;" name="research" value="0">
                                             </div>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label class="control-label col-md-6" for="comp">Computational Work:</label>
                                             <div class="col-md-6">
-                                                <input required type="text" id="comp" class="form-control" style=" border: solid black 1px;" name="comp">
+                                                <input type="text" id="comp" class="form-control" style=" border: solid black 1px;" name="comp" value="0">
                                             </div>
                                         </div>
                                     </div>
@@ -221,16 +221,16 @@ if ( !strcmp($_SESSION['role'], "student") )
                                     <div class="form-group col-md-12">
                                         <label class="control-label col-md-3" for="tot_hrs">Total No. of hours per week:</label>
                                         <div class="col-md-3">
-                                            <input required type="number" id="tot_hrs" class="form-control" style=" border: solid black 1px;" name="hours">
+                                            <input type="number" id="tot_hrs" class="form-control" style=" border: solid black 1px;" name="hours" readonly="true">
                                         </div>
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label class="control-label col-md-3" for="details">Details of work carried out:</label>
                                         <div class="col-md-6">
-                                            <textarea required  id="details" class="form-control" style=" border: solid black 1px;" name="details"></textarea>
+                                            <textarea  id="details" class="form-control" style=" border: solid black 1px;" name="details"></textarea>
                                         </div>
                                     </div>
-                                    <input required type="hidden" value="<?php echo date("Y-m-d");?>" name="date">
+                                    <input type="hidden" value="<?php echo date("Y-m-d");?>" name="date">
                                 <div class="row">
                                     <div class="form-group col-md-5">
                                         <label class="control-label col-md-6">Date:</label>
@@ -318,5 +318,73 @@ if ( !strcmp($_SESSION['role'], "student") )
     });
 </script>
 
+<script>
+    function computeTotalHours() {
+
+        var lec, tut, prac, lib_work, research, comp;
+
+        if(isNaN(parseInt($("#lec").val()))){
+            lec = 0;
+            $("#lec").val(0);
+        }
+        else
+            lec = parseInt($("#lec").val());
+
+        if(isNaN(parseInt($("#tut").val()))){
+            tut = 0;
+            $("#tut").val(0);
+        }
+        else
+            tut = parseInt($("#tut").val());
+
+        if(isNaN(parseInt($("#prac").val()))){
+            prac = 0;
+            $("#prac").val(0);
+        }
+        else
+            prac = parseInt($("#prac").val());
+
+        if(isNaN(parseInt($("#lib_work").val()))){
+            lib_work = 0;
+            $("#lib_work").val(0);
+        }
+        else
+            lib_work = parseInt($("#lib_work").val());
+
+        if(isNaN(parseInt($("#research").val()))){
+            research = 0;
+            $("#research").val(0);
+        }
+        else
+            research = parseInt($("#research").val());
+
+        if(isNaN(parseInt($("#comp").val()))){
+            comp = 0;
+            $("#comp").val(0);
+        }
+        else
+            comp = parseInt($("#comp").val());
+
+        $("#tot_hrs").val(lec + tut + prac + lib_work + research + comp);
+    }
+    $("#lec").change(function(){
+        computeTotalHours();
+    });
+    $("#tut").change(function(){
+        computeTotalHours();
+    });
+    $("#prac").change(function(){
+        computeTotalHours();
+    });
+    $("#lib_work").change(function(){
+        computeTotalHours();
+    });
+    $("#research").change(function(){
+        computeTotalHours();
+    });
+    $("#comp").change(function(){
+        computeTotalHours();
+    });
+</script>
 
 </html>
