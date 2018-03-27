@@ -45,13 +45,18 @@ $nextNotifTo  = $nextNotifTo['member_id'];
 //inserting data
 $insQuery = "Insert into stipendsupdetails values ('$stipendID','$sat_work','$assoc_pro','$remarks','$b_date','$remark_sup','$s_date')";
 $insResult = mysqli_query($connection,$insQuery);
+if(!$insResult)
+        echo("Unsuccessful. Try Again <br>".mysqli_error($connection));
 
 //updating the stipend table
 $upQuery = "update stipend set `progress` = 'HOD' where stipend_id = '$stipendID';";
 $upResult  = mysqli_query($connection,$upQuery);
+if(!$upResult)
+        echo("Unsuccessful. Try Again <br>".mysqli_error($connection));
 
 //getting reg_no of student
-$stuQuery = "select reg_no from stipend where stipend_id=$stipendID";
+$stuQuery = "select reg_no from stipend where stipend_id='$stipendID'";
+//echo $stuQuery;
 $reg_no_array = mysqli_fetch_assoc(mysqli_query($connection,$stuQuery));
 $reg_no = $reg_no_array['reg_no'];
 
@@ -66,7 +71,7 @@ if (!$upResult)
         $notificationsCount = mysqli_num_rows($allnotifications);
         $newNotificationId = $notificationsCount + 1;
         $description = "<a href=\"hodStipend.php?stipend_id=$stipendID\">New Stipend Application</a>";
-        $issue_date = $date;
+        $issue_date = date("Y-m-d");
         $target_group = "";
         $target_member = $nextNotifTo;
 

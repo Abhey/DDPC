@@ -43,13 +43,20 @@ $insResult = mysqli_query($connection,$insQuery);
 //updating the stipend table
 $upQuery = "update stipend set stipend_amount='$stipend_amt' where stipend_id='$stipend_id'";
 $upResult = mysqli_query($connection,$upQuery);
+if(!$upResult)
+        echo ("Unsuccessful. Try Again <br>".mysqli_error($connection));
 
 $upQuery = "update stipend set `progress` = 'DDPC Convener' where stipend_id='$stipend_id';";
 $upResult  = mysqli_query($connection,$upQuery);
+if(!$upResult)
+        echo ("Unsuccessful. Try Again <br>".mysqli_error($connection));
 
 //getting reg_no of student
-$stuQuery = "select reg_no from stipend where stipend_id=$stipend_id";
-$reg_no = mysqli_fetch_assoc(mysqli_query($connection,$stuQuery));
+$stuQuery = "select reg_no from stipend where stipend_id='$stipend_id'";
+$stuResult = mysqli_query($connection,$stuQuery);
+if(!$stuResult)
+        echo ("Unsuccessful. Try Again <br>".mysqli_error($connection));
+$reg_no = mysqli_fetch_assoc($stuResult);
 $reg_no = $reg_no['reg_no'];
 
 if (!$upResult)

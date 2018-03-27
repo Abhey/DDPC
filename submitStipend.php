@@ -75,10 +75,10 @@ if (!$result)
         $target_group = "";
         $target_member = $nextNotifTo;
 
-        $query = "INSERT INTO notifications (`id`, `description`, `issue_date`, `target_group`, `target_member`) VALUES('$newNotificationId','".$description."', '$issue_date', '$target_group', '$target_member')";
+        $query = "INSERT INTO notifications (`id`, `description`, `issue_date`, `target_group`, `target_member`) VALUES('$newNotificationId', '$description', '$issue_date', '$target_group', '$target_member')";
         $result = mysqli_query($connection, $query);
-        echo '<script>alert("Stipend Applied Succesfully");
-        window.location="./printStipend.php?stipendID='.$stipendID.';
-        </script>';
+        echo '<script>alert("Applied Successfully");
+                         window.location="./printStipend.php?stipendID='.$stipendID.'";
+                </script>';
         exit();
 }
