@@ -69,7 +69,59 @@
                             </a>
                         </li>
                 <?php
-                } 
+                }
+                //for DDPC Office
+                else if($is_office)
+                {
+                        if(!strcmp($currentTab, "officeDashboard"))
+                                echo "<li class=\"active\">";
+                        else
+                                echo "<li>";
+                        ?>
+                        <a href="officeDashboard.php">
+                                <i class="ti-view-list-alt"></i>
+                                <p>Dashboard</p>
+                        </a>
+                        </li>
+
+                        <?php
+                        if(!strcmp($currentTab, "viewStudents"))
+                                echo "<li class=\"active\">";
+                        else
+                                echo "<li>";
+                        ?>
+                        <a href="yearWiseList.php">
+                                <i class="ti-pencil-alt2"></i>
+                                <p>View Students</p>
+                        </a>
+                        </li>
+
+                        <?php
+                        if(! strcmp($currentTab, "supervisorStudentList"))
+                                echo "<li class=\"active\">";
+                        else
+                                echo "<li>";
+                        ?>
+                        <a href="supervisorStudentList.php">
+                                <i class="ti-user"></i>
+                                <p>Students Under Supervisor</p>
+                        </a>
+                        </li>
+
+                        <?php
+                        if(!strcmp($currentTab, "studentStipendOffice"))
+                                echo "<li class=\"active\">";
+                        else
+                                echo "<li>";
+                        ?>
+                        <a href="studentStipendOffice.php">
+                                <i class="ti-pencil-alt2"></i>
+                                <p>Fill Stipend Details of Students</p>
+                        </a>
+                        </li>
+
+                 <?php
+                }
                 else
                 {
                     if(! strcmp($currentTab, "dashboard"))

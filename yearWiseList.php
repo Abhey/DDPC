@@ -65,7 +65,7 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 
             <?php
 
-                $currentTab = "report";
+                $currentTab = "viewStudents";
 
                 include("./includes/sideNav.php");
 

@@ -136,7 +136,7 @@ $dept = getDepartment($thisUniqueID);
                         <center><h3><b>Motilal Nehru National Institute of Technology Allahabad</b></h3></center>
                         <center><u><h3>Stipend Application</h3></u></center>
                         <br><center><h4><b><u>Head of the Department</u></b></h4></center><br><br>
-                        <form class="form form-horizontal" id="stipend" action="stipendVerdict.php" method="post">
+                        <form class="form form-horizontal" id="stipend" action="" method="post">
                                 <div class="row">
                                         <div class="form-group col-md-6">
                                                 <label class="control-label col-md-4" for="name"><b>Name of Student: </b></label>
@@ -307,7 +307,7 @@ $dept = getDepartment($thisUniqueID);
                                         $ml = $medLeaveResult['Total Days'];
                                 }
 
-                                $hodQuery = "select * from stipendhod where stipend_id='$stipendID'";
+                                $hodQuery = "select * from stipendoffice where stipend_id='$stipendID'";
                                 $hodresult = mysqli_query($connection,$hodQuery);
                                 $hodresult = mysqli_fetch_assoc($hodresult);
                                 $unauth_days = $hodresult['unauth_abs'];
@@ -372,10 +372,10 @@ $dept = getDepartment($thisUniqueID);
                                 <input type="hidden" name="stipend_id" value="<?=$stipendID?>">
                                 <div class="col-md-12">
                                         <div class="col-md-6">
-                                                <button type="submit" class="col-md-offset-3 col-md-6 btn btn-success btn-fill btn-wd" name="verdict_approve" value="approve">Approve</button>
+                                                <button type="button" class="col-md-offset-3 col-md-6 btn btn-success btn-fill btn-wd" name="submit-yes" value="approve">Approve</button>
                                         </div>
                                         <div class="col-md-6">
-                                                <button type="submit" class="col-md-offset-3 col-md-6 btn btn-danger  btn-fill btn-wd" name="verdict_decline" value="decline">Decline</button>
+                                                <button type="button" class="col-md-offset-3 col-md-6 btn btn-danger btn-fill btn-wd" name="submit-no" value="decline">Decline</button>
                                         </div>
                                 </div>
 
@@ -400,4 +400,58 @@ $dept = getDepartment($thisUniqueID);
 
 
 </body>
+<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$("button[name='submit-yes']").click(function(){
+
+var stipend_id = $("input[name='stipend_id']").val();
+
+//making it invisible
+$(this).hide();
+$(this).parent().addClass("col-md-3").removeClass("col-md-offset-3");
+$(this).parent().siblings().eq(0).find("button[name='submit-no']").show();
+//$(this).parents("tr").css({"background-color" : 'lightgreen'});
+
+//sending an ajax request to approve it
+$.post("submitHODStipend.php",
+{
+'verdict': "approve",
+'stipend_id': stipend_id,
+'is_single': true
+
+},function(data,status){
+if(data.trim()!='')
+alert(data);
+})
+
+
+});
+
+$("button[name='submit-no']").click(function(){
+
+var stipend_id = $("input[name='stipend_id']").val();
+//e.stopPropagation();
+
+//making it invisible
+$(this).hide();
+$(this).parent().siblings().eq(0).addClass("col-md-offset-3").removeClass("col-md-3");
+$(this).parent().siblings().eq(0).find("button[name='submit-yes']").show();
+//$(this).parents("tr").css({"background-color" : 'lightsalmon'});
+
+//sending an ajax request to decline it
+$.post("submitHODStipend.php",
+{
+'verdict': "decline",
+'stipend_id': stipend_id,
+'is_single': true
+
+},function(data,status){
+if(data.trim()!='')
+alert(data);
+})
+
+});
+</script>
 </html>

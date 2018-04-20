@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3cb4980e-4182-4291-8c71-b87ed28cb4eb" name="acadserver" url="http://172.31.100.19">
+        <fileTransfer host="172.31.100.19" port="2231" rootFolder="/var/www/html/academics/acadserver/academic_new" accessType="SFTP" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

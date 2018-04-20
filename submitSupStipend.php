@@ -7,7 +7,7 @@
  */
 
 /**
- * This file inserts data to the database after validating it and then updates the progress and sends notification to hod
+ * This file inserts data to the database after validating it and then updates the progress and sends notification to ddpc office
  */
 
 session_start();
@@ -36,10 +36,11 @@ $b_date = trim(stripslashes(htmlentities($_POST['b-date'])));
 $remark_sup = trim(stripslashes(htmlentities($_POST['remarks_sup'])));
 $s_date = trim(stripslashes(htmlentities($_POST['s-date'])));
 
-//Query for HOD
-$hodQuery = "Select member_id  from members where role='ConvenerDDPC'";
-$nextNotifTo = mysqli_fetch_assoc(mysqli_query($connection,$hodQuery));
-$nextNotifTo  = $nextNotifTo['member_id'];
+
+$nextNotifTo = "ddpcoffice";
+
+
+
 
 
 //inserting data
@@ -49,7 +50,7 @@ if(!$insResult)
         echo("Unsuccessful. Try Again <br>".mysqli_error($connection));
 
 //updating the stipend table
-$upQuery = "update stipend set `progress` = 'HOD' where stipend_id = '$stipendID';";
+$upQuery = "update stipend set `progress` = 'DDPC Office' where stipend_id = '$stipendID';";
 $upResult  = mysqli_query($connection,$upQuery);
 if(!$upResult)
         echo("Unsuccessful. Try Again <br>".mysqli_error($connection));
@@ -63,14 +64,16 @@ $reg_no = $reg_no_array['reg_no'];
 if (!$upResult)
 {
         die("Unsuccessful. Try Again <br>".mysqli_error($connection));
-} else {
+}
+else
+{
 
         //Sending Notification
         $query = "SELECT * FROM notifications";
         $allnotifications = mysqli_query($connection, $query);
         $notificationsCount = mysqli_num_rows($allnotifications);
         $newNotificationId = $notificationsCount + 1;
-        $description = " <a href=\"ddpcStipend.php?stipend_id=$stipendID\">New Stipend Application</a>;";
+        $description = " <a href=\"officeStipend.php?stipend_id=$stipendID\">New Stipend Application($reg_no) </a>;";
         $issue_date = date("Y-m-d");
         $target_group = "";
         $target_member = $nextNotifTo;

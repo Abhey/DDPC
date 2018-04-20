@@ -42,21 +42,17 @@ if($is_single)
 {
         if($verdict=="approve")
         {
-                $upQuery = "update stipend set `progress` = 'HOD',`status` = 'pending' where stipend_id='$stipend_id';";
+                $upQuery = "update stipend set `progress` = 'HOD',`status` = 'approved' where stipend_id='$stipend_id';";
                 $upResult  = mysqli_query($connection,$upQuery);
                 if(!$upResult)
                         die("Unsuccessful. Try Again <br>".mysqli_error($connection));
-
-                //Query for HOD (to send notif)
-                $ddpcQuery = "Select member_id  from members where role='HOD' ";
-                $nextNotifTo = mysqli_fetch_assoc(mysqli_query($connection,$ddpcQuery));
-                $nextNotifTo  = $nextNotifTo['member_id'];
-                $description = "<a href=\"studentStipendHOD.php\">New Stipend Application($reg_no)</a>";
+                $nextNotifTo  = $reg_no;
+                $description = "<a href=\"printStipend.php?stipendID=$stipend_id\">Stipend Application: Accepted </a>";
 
         }
         else
         {
-                $upQuery = "update stipend set `progress` = 'DDPC',`status` = 'declined' where stipend_id='$stipend_id';";
+                $upQuery = "update stipend set `progress` = 'HOD',`status` = 'declined' where stipend_id='$stipend_id';";
                 $upResult  = mysqli_query($connection,$upQuery);
                 if(!$upResult)
                         die("Unsuccessful. Try Again <br>".mysqli_error($connection));
@@ -65,16 +61,16 @@ if($is_single)
         }
 
         //Sending Notification
-//        $query = "SELECT * FROM notifications";
-//        $allnotifications = mysqli_query($connection, $query);
-//        $notificationsCount = mysqli_num_rows($allnotifications);
-//        $newNotificationId = $notificationsCount + 1;
-//        $issue_date = date("Y-m-d");
-//        $target_group = "";
-//        $target_member = $nextNotifTo;
-//
-//        $query = "INSERT INTO notifications (`id`, `description`, `issue_date`, `target_group`, `target_member`) VALUES('$newNotificationId', '$description', '$issue_date', '$target_group', '$target_member')";
-//        $result = mysqli_query($connection, $query);
+        $query = "SELECT * FROM notifications";
+        $allnotifications = mysqli_query($connection, $query);
+        $notificationsCount = mysqli_num_rows($allnotifications);
+        $newNotificationId = $notificationsCount + 1;
+        $issue_date = date("Y-m-d");
+        $target_group = "";
+        $target_member = $nextNotifTo;
+
+        $query = "INSERT INTO notifications (`id`, `description`, `issue_date`, `target_group`, `target_member`) VALUES('$newNotificationId', '$description', '$issue_date', '$target_group', '$target_member')";
+        $result = mysqli_query($connection, $query);
 
 }
 else

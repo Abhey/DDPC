@@ -124,6 +124,11 @@
 								<li><a href="studentStipendHOD.php">Approve Stipend Applications</a></li>
 								<?php
 								}
+							if(in_array("ConvenerDDPC", $role_array)){
+								?>
+								<li><a href="studentStipendDDPC.php">Approve Stipend Applications</a></li>
+								<?php
+							}
 
 								?>
 							</ol>

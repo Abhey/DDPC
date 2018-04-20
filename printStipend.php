@@ -118,7 +118,7 @@ $studResult = mysqli_fetch_assoc($studResult);
                                                         </div>
                                                         </div>
 
-                                                <!---------------------------To Be Filled by Student------------------------------------------------>
+                                                <!---------------------------To Be Filled by Student------------------------------------>
                                                 <h4 align="center"><u> (A) To be Filled by Student</u></h4>
                                                 <h5 align="center"><b>Work Assigned By the Department</b></h5>
                                                 <div class="row">
@@ -181,7 +181,7 @@ $studResult = mysqli_fetch_assoc($studResult);
                                                         </div>
                                                 </div>
 
-                                                <!----------------------------------------For Faculty ---------------------------------------------------------->
+                                                <!----------------------------------------For Faculty--------------------------------------------->
 
                                                 <h4 align="center"><u>(B) To Be Completed By The Faculty With Whom Associated For Department Work</u></h4>
 
@@ -306,7 +306,7 @@ $studResult = mysqli_fetch_assoc($studResult);
                                                         $vac_days = "Not Filled Yet";
                                                         $stipend_amount = "Not Filled Yet";
                                                         $hod_date = "Not Filled Yet";
-                                                        $hodQuery = "select * from stipendhod where stipend_id='$stipendID'";
+                                                        $hodQuery = "select * from stipendoffice where stipend_id='$stipendID'";
                                                         $hodresult = mysqli_query($connection,$hodQuery);
                                                         if(mysqli_num_rows($hodresult)>0)
                                                         {

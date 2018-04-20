@@ -13,7 +13,15 @@ if(isset($_POST['login']))
 		$_SESSION['role'] = "admin";
 
 		header("location: ./adminDashboard.php");
-	} else 
+	}else if($reg_no=="ddpcoffice" and $password=="ddpcoffice")
+	{
+		session_start();
+		$_SESSION['reg_no'] = "ddpcoffice";
+		$_SESSION['role'] = "ddpcoffice";
+
+		header("location:./officeDashboard.php");
+	}
+	else
 	{
 		$query = "SELECT * FROM studentmaster where reg_no='$reg_no' and password='$password'";
 		//echo $query

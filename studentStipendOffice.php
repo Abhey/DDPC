@@ -2,15 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: JAshMe
- * Date: 3/26/2018
- * Time: 1:38 AM
+ * Date: 3/25/2018
+ * Time: 7:41 PM
  */
-
 
 include("./includes/preProcess.php");
 $nextNotifTo = "";
-$ddpc_id = $_SESSION['reg_no'];
-$prevPageLink = "fillDetails.php";
+$id = $_SESSION['reg_no'];
+$prevPageLink = "officeDashboard.php";
 
 ?>
 
@@ -43,13 +42,6 @@ $prevPageLink = "fillDetails.php";
         <link href="assets/css/themify-icons.css" rel="stylesheet">
 
         <link href="./css/myCss.css" rel="stylesheet">
-
-        <style>
-                #stu_rows:hover{
-                        background-color: #c8c8c8;
-                        cursor: pointer;
-                }
-        </style>
         <!-- <script type="text/javascript">
             alert("hi");
         </script> -->
@@ -73,7 +65,7 @@ $prevPageLink = "fillDetails.php";
 
                         <?php
 
-                        $currentTab = "student";
+                        $currentTab = "studentStipendOffice";
 
                         include("./includes/sideNav.php");
 
@@ -117,18 +109,18 @@ $prevPageLink = "fillDetails.php";
                                                                         </thead>
                                                                         <tbody>
                                                                         <?php
-                                                                        $query = "SELECT * FROM `stipend` where progress='HOD' ";
+                                                                        $query = "SELECT * FROM `stipend` where progress='DDPC Office' ";
                                                                         $allApps = mysqli_query($connection, $query);
                                                                         // echo "here".mysqli_num_rows($allStudents);
 
                                                                         while( $thisApp = mysqli_fetch_array($allApps) )
                                                                         {
                                                                                 //echo $thisStudent['progress'];
-                                                                                if( !strcmp($thisApp['status'], "approved")|| $thisApp['status']=="declined")
+                                                                                if( !strcmp($thisApp['status'], "approved"))
                                                                                         continue;
                                                                                 else {
                                                                                         ?>
-                                                                                        <tr id="stu_rows">
+                                                                                        <tr>
                                                                                         <td>
                                                                                                 <a href="./viewStudent.php?qwStudent=<?php echo $thisApp['reg_no'] ?>">
                                                                                                         <?php echo $thisApp['reg_no'] ?>
@@ -147,7 +139,7 @@ $prevPageLink = "fillDetails.php";
                                                                                         </td>
                                                                                         <td>
                                                                                                 <?php
-                                                                                                if ($thisApp['status'] == "0.00")
+                                                                                                if ($thisApp['status'] == "pending")
                                                                                                         echo "Not Filled Yet";
                                                                                                 else
                                                                                                         echo $thisApp['stipend_amount']; ?>
@@ -156,9 +148,8 @@ $prevPageLink = "fillDetails.php";
                                                                                                 <?php echo $thisApp['status'] ?>
                                                                                         </td>
                                                                                         <td>
-                                                                                                <form action="">
-                                                                                                        <input type="button" class="col-md-offset-1 col-md-4 btn btn-success btn-fill btn-wd" name="submit-yes" value="Approve">
-                                                                                                        <input type="button" class=" col-md-offset-1 col-md-4 btn btn-danger btn-fill btn-wd" name="submit-no" value="Decline">
+                                                                                                <form method="post" action="officeStipend.php">
+                                                                                                        <input type="submit" name="submit" value="Fill">
                                                                                                         <input type="hidden" name="stipend_id" value="<?php echo $thisApp['stipend_id'] ?>"/>
                                                                                                 </form>
                                                                                         </td>
@@ -169,7 +160,6 @@ $prevPageLink = "fillDetails.php";
                                                                                 <?php
                                                                         }
                                                                         ?>
-
                                                                         </tbody>
                                                                 </table>
                                                         </div>
@@ -211,67 +201,6 @@ $prevPageLink = "fillDetails.php";
 
 <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 <script src="assets/js/demo.js"></script>
-
-
-
-<!-- Script for Table -->
-<script>
-        $("#stu_rows").click(function () {
-                var stipend_id = $(this).find("input[type='hidden']").val();
-                window.location.assign("hodStipend.php?stipend_id="+stipend_id);
-        });
-
-        $("input[name='submit-yes']").click(function(e){
-
-                var stipend_id = $(this).siblings().filter("input[type='hidden']").val();
-                e.stopPropagation();
-
-                //making it invisible
-                $(this).hide();
-                $(this).siblings().filter("input[name='submit-no']").show();
-                $(this).parents("tr").css({"background-color" : 'lightgreen'});
-                $(this).parents("td").css("padding-left","80px");
-
-                //sending an ajax request to approve it
-                $.post("submitHODStipend.php",
-                        {
-                                'verdict': "approve",
-                                'stipend_id': stipend_id,
-                                'is_single': true
-
-                        },function(data,status){
-                                if(data.trim()!='')
-                                        alert(data);
-                        })
-
-
-        });
-
-        $("input[name='submit-no']").click(function(e){
-
-                var stipend_id = $(this).siblings().filter("input[type='hidden']").val();
-                e.stopPropagation();
-
-                //making it invisible
-                $(this).hide();
-                $(this).siblings().filter("input[name='submit-yes']").show();
-                $(this).parents("tr").css({"background-color" : 'lightsalmon'});
-
-                //sending an ajax request to decline it
-                $.post("submitHODStipend.php",
-                        {
-                                'verdict': "decline",
-                                'stipend_id': stipend_id,
-                                'is_single': true
-
-                        },function(data,status){
-                                if(data.trim()!='')
-                                        alert(data);
-                        })
-
-        });
-
-</script>
 
 <script type="text/javascript">
         function removeNot() {

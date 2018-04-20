@@ -1,5 +1,6 @@
 <?php
 session_start();
+$reg_no = '';
 if(!isset($_SESSION['reg_no']))
 {
     header("location: ./");
@@ -10,6 +11,7 @@ else
 include("connect.php");
 
 $is_admin = 0;
+$is_office = 0;
 if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1)
 {
     $is_admin = 1;
@@ -18,7 +20,16 @@ if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1)
     $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
     $user['name'] = "ADMIN";
     $escaped_url = htmlspecialchars( $url, ENT_QUOTES, 'UTF-8' );
-}else if(! strcmp($_SESSION['role'], "student"))
+}else if(isset($_SESSION['role']) && $reg_no=="ddpcoffice")
+{
+    $is_office = 1;
+    $name = "DDPC Office";
+    $user['name'] = "DDPC Office";
+    $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+    $escaped_url = htmlspecialchars( $url, ENT_QUOTES, 'UTF-8' );
+
+}
+else if(! strcmp($_SESSION['role'], "student"))
 {
     $query = "SELECT * FROM studentmaster WHERE reg_no='$reg_no'";
     $results = mysqli_query($connection, $query);

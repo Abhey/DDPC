@@ -36,6 +36,13 @@ $prevPageLink = "fillDetails.php";
         <!--  Paper Dashboard core CSS    -->
         <link href="assets/css/paper-dashboard.css" rel="stylesheet"/>
 
+        <style>
+                #stu_rows:hover{
+                        background-color: #c8c8c8;
+                        cursor: pointer;
+                }
+        </style>
+
         <!--  Fonts and icons     -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
@@ -45,6 +52,9 @@ $prevPageLink = "fillDetails.php";
         <!-- <script type="text/javascript">
             alert("hi");
         </script> -->
+
+
+
 
 
 </head>
@@ -100,27 +110,31 @@ $prevPageLink = "fillDetails.php";
                                                         <div class="content table-responsive table-full-width">
                                                                 <table class="table table-striped">
                                                                         <thead>
+                                                                        <tr>
                                                                         <th>Registration Number</th>
                                                                         <th>Month</th>
                                                                         <th>Year</th>
                                                                         <th>Sem</th>
                                                                         <th>Stipend Amount</th>
                                                                         <th>Status</th>
+                                                                        <th style="text-align: center">Action</th>
+                                                                        </tr>
                                                                         </thead>
                                                                         <tbody>
                                                                         <?php
-                                                                        $query = "SELECT * FROM `stipend` where progress='DDPC Convener' ";
+                                                                        $query = "SELECT * FROM `stipend` where progress='DDPC' ";
                                                                         $allApps = mysqli_query($connection, $query);
                                                                         // echo "here".mysqli_num_rows($allStudents);
 
                                                                         while( $thisApp = mysqli_fetch_array($allApps) )
                                                                         {
                                                                                 //echo $thisStudent['progress'];
-                                                                                if( !strcmp($thisApp['status'], "approved"))
+                                                                                if( !strcmp($thisApp['status'], "approved") || $thisApp['status'] == "declined")
                                                                                         continue;
                                                                                 else {
                                                                                         ?>
-                                                                                        <tr>
+                                                                                        <a href="hodStipend.php?stipend_id=<?=$thisApp['stipend_id'] ?> " >
+                                                                                        <tr id="stu_rows">
                                                                                         <td>
                                                                                                 <a href="./viewStudent.php?qwStudent=<?php echo $thisApp['reg_no'] ?>">
                                                                                                         <?php echo $thisApp['reg_no'] ?>
@@ -147,15 +161,19 @@ $prevPageLink = "fillDetails.php";
                                                                                         <td>
                                                                                                 <?php echo $thisApp['status'] ?>
                                                                                         </td>
-                                                                                        <td>
-                                                                                                <form method="post" action="ddpcStipend.php">
-                                                                                                        <input type="submit" name="submit" value="Fill">
-                                                                                                        <input type="hidden" name="stipend_id" value="<?php echo $thisApp['stipend_id'] ?>"/>
-                                                                                                </form>
+                                                                                         <td>
+<!-- Will Send an AJAX Request for it-->
+<form action="">
+<input type="button" class="col-md-offset-1 col-md-4 btn btn-success btn-fill btn-wd" name="submit-yes" value="Approve">
+<input type="button" class=" col-md-offset-1 col-md-4 btn btn-danger btn-fill btn-wd" name="submit-no" value="Decline">
+<input type="hidden" name="stipend_id" value="<?php echo $thisApp['stipend_id'] ?>"/>
+</form>
                                                                                         </td>
                                                                                         <?php
                                                                                 }?>
                                                                                 </tr>
+
+                                                                                </a>
 
                                                                                 <?php
                                                                         }
@@ -180,21 +198,82 @@ $prevPageLink = "fillDetails.php";
 
 </body>
 
+
 <!--   Core JS Files   -->
 <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 
+
+<!-- Script for Table -->
+<script>
+        $("#stu_rows").click(function () {
+                var stipend_id = $(this).find("input[type='hidden']").val();
+                window.location.assign("ddpcStipend.php?stipend_id="+stipend_id);
+        });
+
+        $("input[name='submit-yes']").click(function(e){
+
+                var stipend_id = $(this).siblings().filter("input[type='hidden']").val();
+                e.stopPropagation();
+
+                //making it invisible
+                $(this).hide();
+                $(this).siblings().filter("input[name='submit-no']").show();
+                $(this).parents("tr").css({"background-color" : 'lightgreen'});
+                $(this).parents("td").css("padding-left","80px");
+
+                //sending an ajax request to approve it
+                $.post("submitDDPCStipend.php",
+                {
+                        'verdict': "approve",
+                        'stipend_id': stipend_id,
+                        'is_single': true
+
+                },function(data,status){
+                                if(data.trim()!='')
+                                        alert(data);
+                })
+
+
+        });
+
+        $("input[name='submit-no']").click(function(e){
+
+                var stipend_id = $(this).siblings().filter("input[type='hidden']").val();
+                e.stopPropagation();
+
+                //making it invisible
+                $(this).hide();
+                $(this).siblings().filter("input[name='submit-yes']").show();
+                $(this).parents("tr").css({"background-color" : 'lightsalmon'});
+
+                //sending an ajax request to decline it
+                $.post("submitDDPCStipend.php",
+                        {
+                                'verdict': "decline",
+                                'stipend_id': stipend_id,
+                                'is_single': true
+
+                        },function(data,status){
+                                if(data.trim()!='')
+                                        alert(data);
+                })
+
+        });
+
+</script>
+
 <!--  Checkbox, Radio & Switch Plugins -->
-<script src="assets/js/bootstrap-checkbox-radio.js"></script>
+<!--<script src="assets/js/bootstrap-checkbox-radio.js"></script>-->
 
 <!--  Charts Plugin -->
-<script src="assets/js/chartist.min.js"></script>
+<!--<script src="assets/js/chartist.min.js"></script>-->
 
 <!--  Notifications Plugin    -->
 <script src="assets/js/bootstrap-notify.js"></script>
 
 <!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>-->
 
 <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
 <script src="assets/js/paper-dashboard.js"></script>
