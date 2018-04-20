@@ -97,12 +97,15 @@
                                                         <div class="content table-responsive table-full-width">
                                                                 <table class="table table-striped">
                                                                         <thead>
+                                                                        <tr>
                                                                         <th>Registration Number</th>
                                                                         <th>Month</th>
                                                                         <th>Year</th>
                                                                         <th>Sem</th>
                                                                         <th>Stipend Amount</th>
                                                                         <th>Status</th>
+                                                                        <th>Progress</th>
+                                                                        </tr>
                                                                         </thead>
                                                                         <tbody>
                                                                         <?php
@@ -140,9 +143,12 @@
                                                                                                 <?php echo $thisApp['status'] ?>
                                                                                         </td>
                                                                                         <td>
+                                                                                                <?php echo $thisApp['progress'] ?>
+                                                                                        </td>
+                                                                                        <td>
                                                                                                 <form method="POST" action="printStipend.php">
                                                                                                         <input type="text" hidden name="stipendID" value="<?php echo $thisApp['stipend_id'] ?>"/>
-                                                                                                        <input type="submit" value="Print"/>
+                                                                                                        <input class="btn btn-info btn-fill btn-wd" type="submit" value="Print"/>
                                                                                                 </form>
                                                                                         </td>
                                                                                 </tr>

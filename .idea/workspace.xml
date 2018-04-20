@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="893d3bd5-d3ba-44f0-8e11-98afa306bc20" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stipendVerdict.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/submitDDPCStipend.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Family.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Family.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/table_verdict.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/approve.php" afterPath="$PROJECT_DIR$/approve.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fillDetails.php" afterPath="$PROJECT_DIR$/fillDetails.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/preProcess.php" afterPath="$PROJECT_DIR$/includes/preProcess.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/sideNav.php" afterPath="$PROJECT_DIR$/includes/sideNav.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/topleft.php" afterPath="$PROJECT_DIR$/includes/topleft.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/printStipend.php" afterPath="$PROJECT_DIR$/printStipend.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/notifications.php" afterPath="$PROJECT_DIR$/includes/notifications.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studentStipendDDPC.php" afterPath="$PROJECT_DIR$/studentStipendDDPC.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studentStipendHOD.php" afterPath="$PROJECT_DIR$/studentStipendHOD.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submitSupStipend.php" afterPath="$PROJECT_DIR$/submitSupStipend.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yearWiseList.php" afterPath="$PROJECT_DIR$/yearWiseList.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ddpcStipend.php" afterPath="$PROJECT_DIR$/officeStipend.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/hodStipend.php" afterPath="$PROJECT_DIR$/ddpcStipend.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewStipend.php" afterPath="$PROJECT_DIR$/viewStipend.php" />
     </list>
     <ignored path="DDPC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,13 +32,74 @@
       <file leaf-file-name="studentStipendDDPC.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studentStipendDDPC.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.327273">
-              <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="43" selection-end-column="16" />
+            <state vertical-scroll-proportion="-5.181818">
+              <caret line="116" column="135" selection-start-line="106" selection-start-column="64" selection-end-line="116" selection-end-column="135" />
               <folding>
                 <element signature="e#6#89#0#PHP" expanded="true" />
                 <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#script#6;n#html#0;n#!!top" expanded="false" />
-                <marker date="1524226799117" expanded="true" signature="5298:5343" placeholder="SELECT * FRO... stipend" />
+                <element signature="n#script#7;n#html#0;n#!!top" expanded="false" />
+                <marker date="1524255735850" expanded="true" signature="6165:6210" placeholder="SELECT * FRO... stipend" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="studentStipendHOD.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studentStipendHOD.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="222" column="42" selection-start-line="222" selection-start-column="42" selection-end-line="222" selection-end-column="42" />
+              <folding>
+                <element signature="e#6#89#0#PHP" expanded="true" />
+                <marker date="1524257461166" expanded="true" signature="5897:5941" placeholder="SELECT * FRO... stipend" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notifications.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/notifications.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-25.963636">
+              <caret line="84" column="51" selection-start-line="84" selection-start-column="51" selection-end-line="84" selection-end-column="51" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#ul#0;n#li#0;n#!!top" expanded="true" />
+                <marker date="1524258666575" expanded="true" signature="516:649" placeholder="SELECT * FRO... notifications" />
+                <marker date="1524258666575" expanded="true" signature="2597:2730" placeholder="SELECT * FRO... notifications" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewStipend.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/viewStipend.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5377856">
+              <caret line="145" column="125" selection-start-line="145" selection-start-column="125" selection-end-line="145" selection-end-column="125" />
+              <folding>
+                <marker date="1524258964598" expanded="true" signature="5123:5171" placeholder="SELECT * FRO... stipend" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myCss.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/myCss.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.423077">
+              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="table_verdict.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/table_verdict.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="110" column="29" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#42#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -58,7 +108,7 @@
       <file leaf-file-name="ddpcStipend.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ddpcStipend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
+            <state vertical-scroll-proportion="136.0">
               <caret line="138" column="80" selection-start-line="138" selection-start-column="80" selection-end-line="138" selection-end-column="80" />
               <folding>
                 <marker date="1524235357427" expanded="true" signature="257:321" placeholder="Select * fro... currentsupervisor" />
@@ -76,8 +126,8 @@
       <file leaf-file-name="submitDDPCStipend.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/submitDDPCStipend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.576923">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state vertical-scroll-proportion="-26.461538">
+              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="82" selection-end-column="1" />
               <folding>
                 <element signature="e#6#89#0#PHP" expanded="true" />
                 <marker date="1524235662611" expanded="true" signature="687:744" placeholder="select reg_n... stipend" />
@@ -91,43 +141,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="studentStipendHOD.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studentStipendHOD.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
-              <caret line="156" column="93" selection-start-line="156" selection-start-column="93" selection-end-line="156" selection-end-column="93" />
-              <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-                <element signature="e#11937#12106#0#HTML" expanded="false" />
-                <element signature="e#12165#13074#0#HTML" expanded="false" />
-                <element signature="e#13132#13976#0#HTML" expanded="false" />
-                <element signature="n#script#9;n#html#0;n#!!top" expanded="false" />
-                <marker date="1524236011053" expanded="true" signature="5027:5071" placeholder="SELECT * FRO... stipend" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="submitHODStipend.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/submitHODStipend.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.314587">
-              <caret line="49" column="78" selection-start-line="49" selection-start-column="78" selection-end-line="49" selection-end-column="78" />
-              <folding>
-                <marker date="1524236289672" expanded="true" signature="687:744" placeholder="select reg_n... stipend" />
-                <marker date="1524236289672" expanded="true" signature="1045:1135" placeholder="update stipe... " />
-                <marker date="1524236289672" expanded="true" signature="1545:1635" placeholder="update stipe... " />
-                <marker date="1524236289672" expanded="true" signature="2043:2070" placeholder="SELECT * FRO... notifications" />
-                <marker date="1524236289672" expanded="true" signature="2379:2568" placeholder="INSERT INTO notifications... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="hodStipend.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hodStipend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-203.0">
+            <state vertical-scroll-proportion="-198.42308">
               <caret line="425" column="12" selection-start-line="425" selection-start-column="12" selection-end-line="425" selection-end-column="12" />
               <folding>
                 <marker date="1524236438385" expanded="true" signature="257:321" placeholder="Select * fro... currentsupervisor" />
@@ -142,7 +159,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="submitHODStipend.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/submitHODStipend.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-31.038462">
+              <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+              <folding>
+                <marker date="1524236289672" expanded="true" signature="687:744" placeholder="select reg_n... stipend" />
+                <marker date="1524236289672" expanded="true" signature="1045:1135" placeholder="update stipe... " />
+                <marker date="1524236289672" expanded="true" signature="1545:1635" placeholder="update stipe... " />
+                <marker date="1524236289672" expanded="true" signature="2043:2070" placeholder="SELECT * FRO... notifications" />
+                <marker date="1524236289672" expanded="true" signature="2379:2568" placeholder="INSERT INTO notifications... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -158,12 +198,10 @@
         <option value="$PROJECT_DIR$/studentLeave.php" />
         <option value="$PROJECT_DIR$/submitLeave.php" />
         <option value="$PROJECT_DIR$/applyLeave.php" />
-        <option value="$PROJECT_DIR$/includes/notifications.php" />
         <option value="$PROJECT_DIR$/includes/topnav.php" />
         <option value="$PROJECT_DIR$/includes/logo.php" />
         <option value="$PROJECT_DIR$/includes/topright.php" />
         <option value="$PROJECT_DIR$/includes/validFunc.php" />
-        <option value="$PROJECT_DIR$/viewStipend.php" />
         <option value="$PROJECT_DIR$/printLeave.php" />
         <option value="$PROJECT_DIR$/printDP01.php" />
         <option value="$PROJECT_DIR$/studentStipend.php" />
@@ -189,16 +227,20 @@
         <option value="$PROJECT_DIR$/fillDetails.php" />
         <option value="$PROJECT_DIR$/approve.php" />
         <option value="$PROJECT_DIR$/assets/css/paper-dashboard.css" />
-        <option value="$PROJECT_DIR$/css/myCss.css" />
         <option value="$PROJECT_DIR$/submitOfficeStipend.php" />
         <option value="$PROJECT_DIR$/includes/utilities.php" />
-        <option value="$PROJECT_DIR$/studentStipendDDPC.php" />
         <option value="$PROJECT_DIR$/printStipend.php" />
         <option value="$PROJECT_DIR$/ddpcStipend.php" />
-        <option value="$PROJECT_DIR$/submitDDPCStipend.php" />
-        <option value="$PROJECT_DIR$/studentStipendHOD.php" />
         <option value="$PROJECT_DIR$/submitHODStipend.php" />
         <option value="$PROJECT_DIR$/hodStipend.php" />
+        <option value="$PROJECT_DIR$/assets/js/table_verdict.js" />
+        <option value="$PROJECT_DIR$/submitDDPCStipend.php" />
+        <option value="$PROJECT_DIR$/js/table_verdict.js" />
+        <option value="$PROJECT_DIR$/studentStipendDDPC.php" />
+        <option value="$PROJECT_DIR$/studentStipendHOD.php" />
+        <option value="$PROJECT_DIR$/css/myCss.css" />
+        <option value="$PROJECT_DIR$/includes/notifications.php" />
+        <option value="$PROJECT_DIR$/viewStipend.php" />
       </list>
     </option>
   </component>
@@ -271,6 +313,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DDPC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DDPC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -282,38 +338,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DDPC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DDPC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DDPC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DDPC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DDPC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -338,6 +362,9 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\Xampp\htdocs\DDPC\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="I:\Xampp\htdocs\DDPC" />
     </key>
@@ -424,10 +451,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1378" height="733" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17547724" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21071953" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21071953" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744783" sideWeight="0.50293684" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -718,17 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewStipend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.724138">
-          <caret line="120" column="84" selection-start-line="120" selection-start-column="84" selection-end-line="120" selection-end-column="84" />
-          <folding>
-            <element signature="e#6#88#0#PHP" expanded="false" />
-            <marker date="1521287990071" expanded="true" signature="4878:4926" placeholder="SELECT * FRO... stipend" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addDocumentType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -788,17 +804,6 @@
             <marker date="1524163565332" expanded="true" signature="2997:3132" placeholder="..." />
             <marker date="1524163565332" expanded="true" signature="3049:3113" placeholder="..." />
             <marker date="1524163565332" expanded="true" signature="3196:3214" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/notifications.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="21.923077">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding>
-            <marker date="1521045408592" expanded="true" signature="516:649" placeholder="SELECT * FRO... notifications" />
-            <marker date="1521045408592" expanded="true" signature="1934:2067" placeholder="SELECT * FRO... notifications" />
           </folding>
         </state>
       </provider>
@@ -945,14 +950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/demo.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.889279">
@@ -965,14 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45925927">
           <caret line="1251" column="27" selection-start-line="1251" selection-start-column="27" selection-end-line="1251" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/myCss.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56766254">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1086,9 +1075,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/submitHODStipend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-31.038462">
+          <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+          <folding>
+            <marker date="1524236289672" expanded="true" signature="687:744" placeholder="select reg_n... stipend" />
+            <marker date="1524236289672" expanded="true" signature="1045:1135" placeholder="update stipe... " />
+            <marker date="1524236289672" expanded="true" signature="1545:1635" placeholder="update stipe... " />
+            <marker date="1524236289672" expanded="true" signature="2043:2070" placeholder="SELECT * FRO... notifications" />
+            <marker date="1524236289672" expanded="true" signature="2379:2568" placeholder="INSERT INTO notifications... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.7188048">
+          <caret line="91" column="27" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/submitDDPCStipend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.461538">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="82" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="true" />
+            <marker date="1524235662611" expanded="true" signature="687:744" placeholder="select reg_n... stipend" />
+            <marker date="1524235662611" expanded="true" signature="1045:1134" placeholder="update stipe... " />
+            <marker date="1524235662611" expanded="true" signature="1400:1447" placeholder="Select membe... members" />
+            <marker date="1524235662611" expanded="true" signature="1766:1857" placeholder="update stipe... " />
+            <marker date="1524235662611" expanded="true" signature="2267:2294" placeholder="SELECT * FRO... notifications" />
+            <marker date="1524235662611" expanded="true" signature="2619:2808" placeholder="INSERT INTO notifications... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ddpcStipend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
+        <state vertical-scroll-proportion="136.0">
           <caret line="138" column="80" selection-start-line="138" selection-start-column="80" selection-end-line="138" selection-end-column="80" />
           <folding>
             <marker date="1524235357427" expanded="true" signature="257:321" placeholder="Select * fro... currentsupervisor" />
@@ -1102,53 +1129,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/submitDDPCStipend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.576923">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-            <marker date="1524235662611" expanded="true" signature="687:744" placeholder="select reg_n... stipend" />
-            <marker date="1524235662611" expanded="true" signature="1045:1134" placeholder="update stipe... " />
-            <marker date="1524235662611" expanded="true" signature="1400:1447" placeholder="Select membe... members" />
-            <marker date="1524235662611" expanded="true" signature="1766:1857" placeholder="update stipe... " />
-            <marker date="1524235662611" expanded="true" signature="2267:2294" placeholder="SELECT * FRO... notifications" />
-            <marker date="1524235662611" expanded="true" signature="2619:2808" placeholder="INSERT INTO notifications... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studentStipendDDPC.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.327273">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="43" selection-end-column="16" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#script#6;n#html#0;n#!!top" expanded="false" />
-            <marker date="1524226799117" expanded="true" signature="5298:5343" placeholder="SELECT * FRO... stipend" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studentStipendHOD.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
-          <caret line="156" column="93" selection-start-line="156" selection-start-column="93" selection-end-line="156" selection-end-column="93" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-            <element signature="e#11937#12106#0#HTML" expanded="false" />
-            <element signature="e#12165#13074#0#HTML" expanded="false" />
-            <element signature="e#13132#13976#0#HTML" expanded="false" />
-            <element signature="n#script#9;n#html#0;n#!!top" expanded="false" />
-            <marker date="1524236011053" expanded="true" signature="5027:5071" placeholder="SELECT * FRO... stipend" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hodStipend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-203.0">
+        <state vertical-scroll-proportion="-198.42308">
           <caret line="425" column="12" selection-start-line="425" selection-start-column="12" selection-end-line="425" selection-end-column="12" />
           <folding>
             <marker date="1524236438385" expanded="true" signature="257:321" placeholder="Select * fro... currentsupervisor" />
@@ -1162,16 +1145,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/submitHODStipend.php">
+    <entry file="file://$PROJECT_DIR$/studentStipendHOD.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.314587">
-          <caret line="49" column="78" selection-start-line="49" selection-start-column="78" selection-end-line="49" selection-end-column="78" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="222" column="42" selection-start-line="222" selection-start-column="42" selection-end-line="222" selection-end-column="42" />
           <folding>
-            <marker date="1524236289672" expanded="true" signature="687:744" placeholder="select reg_n... stipend" />
-            <marker date="1524236289672" expanded="true" signature="1045:1135" placeholder="update stipe... " />
-            <marker date="1524236289672" expanded="true" signature="1545:1635" placeholder="update stipe... " />
-            <marker date="1524236289672" expanded="true" signature="2043:2070" placeholder="SELECT * FRO... notifications" />
-            <marker date="1524236289672" expanded="true" signature="2379:2568" placeholder="INSERT INTO notifications... " />
+            <element signature="e#6#89#0#PHP" expanded="true" />
+            <marker date="1524257461166" expanded="true" signature="5897:5941" placeholder="SELECT * FRO... stipend" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentStipendDDPC.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.181818">
+          <caret line="116" column="135" selection-start-line="106" selection-start-column="64" selection-end-line="116" selection-end-column="135" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#script#7;n#html#0;n#!!top" expanded="false" />
+            <marker date="1524255735850" expanded="true" signature="6165:6210" placeholder="SELECT * FRO... stipend" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/table_verdict.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="29" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/myCss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/notifications.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.963636">
+          <caret line="84" column="51" selection-start-line="84" selection-start-column="51" selection-end-line="84" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#ul#0;n#li#0;n#!!top" expanded="true" />
+            <marker date="1524258666575" expanded="true" signature="516:649" placeholder="SELECT * FRO... notifications" />
+            <marker date="1524258666575" expanded="true" signature="2597:2730" placeholder="SELECT * FRO... notifications" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewStipend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5377856">
+          <caret line="145" column="125" selection-start-line="145" selection-start-column="125" selection-end-line="145" selection-end-column="125" />
+          <folding>
+            <marker date="1524258964598" expanded="true" signature="5123:5171" placeholder="SELECT * FRO... stipend" />
           </folding>
         </state>
       </provider>

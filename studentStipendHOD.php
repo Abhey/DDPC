@@ -102,8 +102,17 @@ $prevPageLink = "fillDetails.php";
                                         <div class="col-md-12">
                                                 <div class="card">
                                                         <div class="header">
-                                                                <h4 class="title">Stipend Applications</h4>
-                                                                <p class="category">List of stipend application of all the students</p>
+                                                                <h4 class="title col-md-6">Stipend Applications</h4>
+                                                                <div class="col-md-6">
+                                                                        <div class="col-md-offset-1 col-md-4">
+                                                                                <button class="btn btn-success col-md-12" id="approve_all">Approve All</button>
+                                                                        </div>
+                                                                        <div class="col-md-offset-2 col-md-4">
+                                                                                <button class="btn btn-danger col-md-12" id="decline_all">Decline All</button>
+                                                                        </div>
+
+                                                                </div>
+                                                                <p class="category">List of stipend application of all the students</p>sss
                                                         </div>
                                                         <div class="content table-responsive table-full-width">
                                                                 <table class="table table-striped">
@@ -146,16 +155,13 @@ $prevPageLink = "fillDetails.php";
                                                                                                 <?php echo $thisApp['sem']; ?>
                                                                                         </td>
                                                                                         <td>
-                                                                                                <?php
-                                                                                                if ($thisApp['status'] == "0.00")
-                                                                                                        echo "Not Filled Yet";
-                                                                                                else
-                                                                                                        echo $thisApp['stipend_amount']; ?>
+                                                                                                <?php echo $thisApp['stipend_amount']; ?>
                                                                                         </td>
                                                                                         <td>
                                                                                                 <?php echo $thisApp['status'] ?>
                                                                                         </td>
                                                                                         <td>
+<!--                                                                                                Same as in DDPC-->
                                                                                                 <form action="">
                                                                                                         <input type="button" class="col-md-offset-1 col-md-4 btn btn-success btn-fill btn-wd" name="submit-yes" value="Approve">
                                                                                                         <input type="button" class=" col-md-offset-1 col-md-4 btn btn-danger btn-fill btn-wd" name="submit-no" value="Decline">
@@ -212,66 +218,13 @@ $prevPageLink = "fillDetails.php";
 <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 <script src="assets/js/demo.js"></script>
 
-
-
-<!-- Script for Table -->
+<!--Always keep it with table_verdict-->
 <script>
-        $("#stu_rows").click(function () {
-                var stipend_id = $(this).find("input[type='hidden']").val();
-                window.location.assign("hodStipend.php?stipend_id="+stipend_id);
-        });
-
-        $("input[name='submit-yes']").click(function(e){
-
-                var stipend_id = $(this).siblings().filter("input[type='hidden']").val();
-                e.stopPropagation();
-
-                //making it invisible
-                $(this).hide();
-                $(this).siblings().filter("input[name='submit-no']").show();
-                $(this).parents("tr").css({"background-color" : 'lightgreen'});
-                $(this).parents("td").css("padding-left","80px");
-
-                //sending an ajax request to approve it
-                $.post("submitHODStipend.php",
-                        {
-                                'verdict': "approve",
-                                'stipend_id': stipend_id,
-                                'is_single': true
-
-                        },function(data,status){
-                                if(data.trim()!='')
-                                        alert(data);
-                        })
-
-
-        });
-
-        $("input[name='submit-no']").click(function(e){
-
-                var stipend_id = $(this).siblings().filter("input[type='hidden']").val();
-                e.stopPropagation();
-
-                //making it invisible
-                $(this).hide();
-                $(this).siblings().filter("input[name='submit-yes']").show();
-                $(this).parents("tr").css({"background-color" : 'lightsalmon'});
-
-                //sending an ajax request to decline it
-                $.post("submitHODStipend.php",
-                        {
-                                'verdict': "decline",
-                                'stipend_id': stipend_id,
-                                'is_single': true
-
-                        },function(data,status){
-                                if(data.trim()!='')
-                                        alert(data);
-                        })
-
-        });
-
+        var ajax_request_url = "submitHODStipend.php";
+        var details_url = "hodStipend.php";
 </script>
+<!-- Script for Table -->
+<script src="js/table_verdict.js"></script>
 
 <script type="text/javascript">
         function removeNot() {

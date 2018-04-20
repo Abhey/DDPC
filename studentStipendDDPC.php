@@ -104,7 +104,16 @@ $prevPageLink = "fillDetails.php";
                                         <div class="col-md-12">
                                                 <div class="card">
                                                         <div class="header">
-                                                                <h4 class="title">Stipend Applications</h4>
+                                                                <h4 class="title col-md-6">Stipend Applications</h4>
+                                                                <div class="col-md-6">
+                                                                        <div class="col-md-offset-1 col-md-4">
+                                                                                <button class="btn btn-success col-md-12" id="approve_all">Approve All</button>
+                                                                        </div>
+                                                                        <div class="col-md-offset-2 col-md-4">
+                                                                                <button class="btn btn-danger col-md-12" id="decline_all">Decline All</button>
+                                                                        </div>
+
+                                                                </div>
                                                                 <p class="category">List of stipend application of all the students</p>
                                                         </div>
                                                         <div class="content table-responsive table-full-width">
@@ -133,7 +142,6 @@ $prevPageLink = "fillDetails.php";
                                                                                         continue;
                                                                                 else {
                                                                                         ?>
-                                                                                        <a href="hodStipend.php?stipend_id=<?=$thisApp['stipend_id'] ?> " >
                                                                                         <tr id="stu_rows">
                                                                                         <td>
                                                                                                 <a href="./viewStudent.php?qwStudent=<?php echo $thisApp['reg_no'] ?>">
@@ -152,17 +160,13 @@ $prevPageLink = "fillDetails.php";
                                                                                                 <?php echo $thisApp['sem']; ?>
                                                                                         </td>
                                                                                         <td>
-                                                                                                <?php
-                                                                                                if ($thisApp['status'] == "pending")
-                                                                                                        echo "Not Filled Yet";
-                                                                                                else
-                                                                                                        echo $thisApp['stipend_amount']; ?>
+                                                                                                <?php echo $thisApp['stipend_amount']; ?>
                                                                                         </td>
                                                                                         <td>
                                                                                                 <?php echo $thisApp['status'] ?>
                                                                                         </td>
                                                                                          <td>
-<!-- Will Send an AJAX Request for it-->
+<!-- Will Send an AJAX Request for it, done in table_verdict.js-->
 <form action="">
 <input type="button" class="col-md-offset-1 col-md-4 btn btn-success btn-fill btn-wd" name="submit-yes" value="Approve">
 <input type="button" class=" col-md-offset-1 col-md-4 btn btn-danger btn-fill btn-wd" name="submit-no" value="Decline">
@@ -172,8 +176,6 @@ $prevPageLink = "fillDetails.php";
                                                                                         <?php
                                                                                 }?>
                                                                                 </tr>
-
-                                                                                </a>
 
                                                                                 <?php
                                                                         }
@@ -203,77 +205,21 @@ $prevPageLink = "fillDetails.php";
 <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 
-
-<!-- Script for Table -->
 <script>
-        $("#stu_rows").click(function () {
-                var stipend_id = $(this).find("input[type='hidden']").val();
-                window.location.assign("ddpcStipend.php?stipend_id="+stipend_id);
-        });
-
-        $("input[name='submit-yes']").click(function(e){
-
-                var stipend_id = $(this).siblings().filter("input[type='hidden']").val();
-                e.stopPropagation();
-
-                //making it invisible
-                $(this).hide();
-                $(this).siblings().filter("input[name='submit-no']").show();
-                $(this).parents("tr").css({"background-color" : 'lightgreen'});
-                $(this).parents("td").css("padding-left","80px");
-
-                //sending an ajax request to approve it
-                $.post("submitDDPCStipend.php",
-                {
-                        'verdict': "approve",
-                        'stipend_id': stipend_id,
-                        'is_single': true
-
-                },function(data,status){
-                                if(data.trim()!='')
-                                        alert(data);
-                })
-
-
-        });
-
-        $("input[name='submit-no']").click(function(e){
-
-                var stipend_id = $(this).siblings().filter("input[type='hidden']").val();
-                e.stopPropagation();
-
-                //making it invisible
-                $(this).hide();
-                $(this).siblings().filter("input[name='submit-yes']").show();
-                $(this).parents("tr").css({"background-color" : 'lightsalmon'});
-
-                //sending an ajax request to decline it
-                $.post("submitDDPCStipend.php",
-                        {
-                                'verdict': "decline",
-                                'stipend_id': stipend_id,
-                                'is_single': true
-
-                        },function(data,status){
-                                if(data.trim()!='')
-                                        alert(data);
-                })
-
-        });
+        var ajax_request_url = "submitDDPCStipend.php";
+        var details_url = "ddpcStipend.php";
 
 </script>
 
-<!--  Checkbox, Radio & Switch Plugins -->
-<!--<script src="assets/js/bootstrap-checkbox-radio.js"></script>-->
+<!-- Script for Approve and Decline -->
+<script src="./js/table_verdict.js">
 
-<!--  Charts Plugin -->
-<!--<script src="assets/js/chartist.min.js"></script>-->
+</script>
+
 
 <!--  Notifications Plugin    -->
 <script src="assets/js/bootstrap-notify.js"></script>
 
-<!--  Google Maps Plugin    -->
-<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>-->
 
 <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
 <script src="assets/js/paper-dashboard.js"></script>

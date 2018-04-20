@@ -22,7 +22,20 @@
 									<p>Notifications</p>
 									<b class="caret"></b>
                               </a>
+                                    <script>
+                                            var allNotifs = [];
+                                    </script>
+
+                                <style>
+                                        #mark{
+                                                margin-left: 50px;
+                                                margin-bottom: 10px;
+                                                cursor: pointer;
+                                        }
+                                </style>
                               <ul class="dropdown-menu">
+                                      <br>
+                                 <a id="mark" onclick="markAllAsDone()">Mark All as Read</a>
                                 <?php
                                     $lastNot = 0;
                                     $thisRole = $_SESSION['role'];
@@ -39,7 +52,10 @@
                                             continue;*/
                                         
                                 ?>
-              <li id="<?php echo $notification['id']; ?>" onclick="markAsDone(<?php echo $notification['id']; ?>)"><a href="#"><?php echo $notification['description']; ?></a></li>
+              <li id="<?php echo $notification['id']; ?>" onclick="markAsDone(<?php echo $notification['id']; ?>)"><?php echo $notification['description']; ?></li>
+                                            <script>
+                                                    allNotifs.push(<?= $notification['id'] ?>);
+                                            </script>
                                     
                                 <?php } ?>
                                 <span style="display: none;" id = "notid"><?php echo $lastNot; ?> </span>
@@ -64,4 +80,13 @@
                                 document.getElementById("notificationsCount").innerHTML = xmldata.responseText;
                                 document.getElementById(notificationId).style.display = 'none';
                             }
+
+
+                            function markAllAsDone()
+                            {
+                                        allNotifs.forEach(function(notif){
+                                              markAsDone(notif);
+                                        });
+                            }
+
                         </script>
