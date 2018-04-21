@@ -28,12 +28,10 @@
 
                                 <style>
                                         #mark{
-                                                margin-left: 50px;
-                                                margin-bottom: 10px;
                                                 cursor: pointer;
                                         }
                                 </style>
-                              <ul class="dropdown-menu">
+                              <ul class="dropdown-menu" style="text-align: center">
                                       <br>
                                  <a id="mark" onclick="markAllAsDone()">Mark All as Read</a>
                                 <?php

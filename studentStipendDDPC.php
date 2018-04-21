@@ -210,7 +210,6 @@ $prevPageLink = "fillDetails.php";
         var details_url = "ddpcStipend.php";
 
 </script>
-
 <!-- Script for Approve and Decline -->
 <script src="./js/table_verdict.js">
 

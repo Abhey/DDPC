@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="893d3bd5-d3ba-44f0-8e11-98afa306bc20" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/notifications.php" afterPath="$PROJECT_DIR$/includes/notifications.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/table_verdict.js" afterPath="$PROJECT_DIR$/js/table_verdict.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/printStipend.php" afterPath="$PROJECT_DIR$/printStipend.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports.php" afterPath="$PROJECT_DIR$/reports.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studentStipendDDPC.php" afterPath="$PROJECT_DIR$/studentStipendDDPC.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studentStipendHOD.php" afterPath="$PROJECT_DIR$/studentStipendHOD.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studentStipendOffice.php" afterPath="$PROJECT_DIR$/studentStipendOffice.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studentStipendSup.php" afterPath="$PROJECT_DIR$/studentStipendSup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submitDDPCStipend.php" afterPath="$PROJECT_DIR$/submitDDPCStipend.php" />
     </list>
     <ignored path="DDPC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,75 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="studentStipendDDPC.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studentStipendDDPC.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.181818">
-              <caret line="116" column="135" selection-start-line="106" selection-start-column="64" selection-end-line="116" selection-end-column="135" />
-              <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-                <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#script#7;n#html#0;n#!!top" expanded="false" />
-                <marker date="1524255735850" expanded="true" signature="6165:6210" placeholder="SELECT * FRO... stipend" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="studentStipendHOD.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studentStipendHOD.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="222" column="42" selection-start-line="222" selection-start-column="42" selection-end-line="222" selection-end-column="42" />
-              <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-                <marker date="1524257461166" expanded="true" signature="5897:5941" placeholder="SELECT * FRO... stipend" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="notifications.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/notifications.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.963636">
-              <caret line="84" column="51" selection-start-line="84" selection-start-column="51" selection-end-line="84" selection-end-column="51" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#ul#0;n#li#0;n#!!top" expanded="true" />
-                <marker date="1524258666575" expanded="true" signature="516:649" placeholder="SELECT * FRO... notifications" />
-                <marker date="1524258666575" expanded="true" signature="2597:2730" placeholder="SELECT * FRO... notifications" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="viewStipend.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/viewStipend.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5377856">
-              <caret line="145" column="125" selection-start-line="145" selection-start-column="125" selection-end-line="145" selection-end-column="125" />
-              <folding>
-                <marker date="1524258964598" expanded="true" signature="5123:5171" placeholder="SELECT * FRO... stipend" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myCss.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/myCss.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077">
-              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="table_verdict.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/table_verdict.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="110" column="29" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="29" />
+              <caret line="117" column="34" selection-start-line="117" selection-start-column="34" selection-end-line="117" selection-end-column="34" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -100,19 +44,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ddpcStipend.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ddpcStipend.php">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="136.0">
-              <caret line="138" column="80" selection-start-line="138" selection-start-column="80" selection-end-line="138" selection-end-column="80" />
+            <state vertical-scroll-proportion="1.1353251">
+              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
               <folding>
-                <marker date="1524235357427" expanded="true" signature="257:321" placeholder="Select * fro... currentsupervisor" />
-                <marker date="1524235357427" expanded="true" signature="652:705" placeholder="select * fro... stipend" />
-                <marker date="1524235357427" expanded="true" signature="834:898" placeholder="select * fro... stipendstuddetails" />
-                <marker date="1524235357427" expanded="true" signature="1014:1077" placeholder="select * fro... stipendsupdetails" />
-                <marker date="1524235357427" expanded="true" signature="17608:17891" placeholder="SELECT month... " />
-                <marker date="1524235357427" expanded="true" signature="18511:18794" placeholder="SELECT month... " />
-                <marker date="1524235357427" expanded="true" signature="19247:19304" placeholder="select * fro... stipendhod" />
+                <marker date="1524163741160" expanded="true" signature="663:738" placeholder="SELECT * FRO... studentmaster" />
+                <marker date="1524163741160" expanded="true" signature="947:996" placeholder="SELECT * FRO... members" />
+                <marker date="1524163741160" expanded="true" signature="1237:1310" placeholder="SELECT * FRO... faculty" />
+                <marker date="1524163741160" expanded="true" signature="1419:1466" placeholder="SELECT * FRO... members" />
+                <marker date="1524163741160" expanded="true" signature="1872:1935" placeholder="SELECT * FRO... currentsupervisor" />
+                <marker date="1524163741160" expanded="true" signature="2467:2530" placeholder="SELECT * FRO... currentsupervisor" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="studentStipendDDPC.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studentStipendDDPC.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-138.61539">
+              <caret line="212" column="39" selection-start-line="212" selection-start-column="39" selection-end-line="212" selection-end-column="39" />
+              <folding>
+                <element signature="e#6#89#0#PHP" expanded="true" />
+                <marker date="1524304747825" expanded="true" signature="6165:6210" placeholder="SELECT * FRO... stipend" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="studentStipendSup.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studentStipendSup.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.230769">
+              <caret line="173" column="205" selection-start-line="173" selection-start-column="120" selection-end-line="173" selection-end-column="205" />
+              <folding>
+                <marker date="1524306387458" expanded="true" signature="397:475" placeholder="SELECT reg_n... currentsupervisor" />
+                <marker date="1524306387458" expanded="true" signature="685:744" placeholder="Select role members" />
+                <marker date="1524306387458" expanded="true" signature="5616:5639" placeholder="SELECT * FRO... stipend" />
+                <marker date="1524306387458" expanded="true" signature="5616:5655" placeholder="SELECT * FRO... stipend" />
+                <marker date="1524306387458" expanded="true" signature="5616:5666" placeholder="SELECT * FRO... stipend" />
+                <marker date="1524306387458" expanded="true" signature="5616:5667" placeholder="SELECT * FRO... stipend" />
+                <marker date="1524306387458" expanded="true" signature="5616:5787" placeholder="SELECT * FRO... stipend" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="studentStipendOffice.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studentStipendOffice.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.30769232">
+              <caret line="151" column="189" selection-start-line="151" selection-start-column="189" selection-end-line="151" selection-end-column="189" />
+              <folding>
+                <element signature="e#6#89#0#PHP" expanded="true" />
+                <marker date="1524306446850" expanded="true" signature="4861:4913" placeholder="SELECT * FRO... stipend" />
               </folding>
             </state>
           </provider>
@@ -121,50 +108,15 @@
       <file leaf-file-name="submitDDPCStipend.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/submitDDPCStipend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.461538">
-              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="82" selection-end-column="1" />
+            <state vertical-scroll-proportion="-42.5">
+              <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
               <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-                <marker date="1524235662611" expanded="true" signature="687:744" placeholder="select reg_n... stipend" />
-                <marker date="1524235662611" expanded="true" signature="1045:1134" placeholder="update stipe... " />
-                <marker date="1524235662611" expanded="true" signature="1400:1447" placeholder="Select membe... members" />
-                <marker date="1524235662611" expanded="true" signature="1766:1857" placeholder="update stipe... " />
-                <marker date="1524235662611" expanded="true" signature="2267:2294" placeholder="SELECT * FRO... notifications" />
-                <marker date="1524235662611" expanded="true" signature="2619:2808" placeholder="INSERT INTO notifications... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hodStipend.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hodStipend.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-198.42308">
-              <caret line="425" column="12" selection-start-line="425" selection-start-column="12" selection-end-line="425" selection-end-column="12" />
-              <folding>
-                <marker date="1524236438385" expanded="true" signature="257:321" placeholder="Select * fro... currentsupervisor" />
-                <marker date="1524236438385" expanded="true" signature="652:705" placeholder="select * fro... stipend" />
-                <marker date="1524236438385" expanded="true" signature="834:898" placeholder="select * fro... stipendstuddetails" />
-                <marker date="1524236438385" expanded="true" signature="1014:1077" placeholder="select * fro... stipendsupdetails" />
-                <marker date="1524236438385" expanded="true" signature="17608:17891" placeholder="SELECT month... " />
-                <marker date="1524236438385" expanded="true" signature="18511:18794" placeholder="SELECT month... " />
-                <marker date="1524236438385" expanded="true" signature="19247:19304" placeholder="select * fro... stipendoffice" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="submitHODStipend.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/submitHODStipend.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-31.038462">
-              <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
-              <folding>
-                <marker date="1524236289672" expanded="true" signature="687:744" placeholder="select reg_n... stipend" />
-                <marker date="1524236289672" expanded="true" signature="1045:1135" placeholder="update stipe... " />
-                <marker date="1524236289672" expanded="true" signature="1545:1635" placeholder="update stipe... " />
-                <marker date="1524236289672" expanded="true" signature="2043:2070" placeholder="SELECT * FRO... notifications" />
-                <marker date="1524236289672" expanded="true" signature="2379:2568" placeholder="INSERT INTO notifications... " />
+                <marker date="1524305748897" expanded="true" signature="803:860" placeholder="select reg_n... stipend" />
+                <marker date="1524305748897" expanded="true" signature="1119:1208" placeholder="update stipe... " />
+                <marker date="1524305748897" expanded="true" signature="1402:1493" placeholder="update stipe... " />
+                <marker date="1524305748897" expanded="true" signature="1749:1796" placeholder="Select membe... members" />
+                <marker date="1524305748897" expanded="true" signature="2768:2795" placeholder="SELECT * FRO... notifications" />
+                <marker date="1524305748897" expanded="true" signature="3104:3293" placeholder="INSERT INTO notifications... " />
               </folding>
             </state>
           </provider>
@@ -185,9 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application.php" />
-        <option value="$PROJECT_DIR$/approveDP01.php" />
-        <option value="$PROJECT_DIR$/studentDP01.php" />
         <option value="$PROJECT_DIR$/applyDP04.php" />
         <option value="$PROJECT_DIR$/approveLeave.php" />
         <option value="$PROJECT_DIR$/studentLeave.php" />
@@ -200,7 +149,6 @@
         <option value="$PROJECT_DIR$/printLeave.php" />
         <option value="$PROJECT_DIR$/printDP01.php" />
         <option value="$PROJECT_DIR$/studentStipend.php" />
-        <option value="$PROJECT_DIR$/studentStipendSup.php" />
         <option value="$PROJECT_DIR$/supStipend.php" />
         <option value="$PROJECT_DIR$/submitHOD.php" />
         <option value="$PROJECT_DIR$/test1.php" />
@@ -213,7 +161,6 @@
         <option value="$PROJECT_DIR$/includes/topleft.php" />
         <option value="$PROJECT_DIR$/officeDashboard.php" />
         <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/studentStipendOffice.php" />
         <option value="$PROJECT_DIR$/includes/sideNav.php" />
         <option value="$PROJECT_DIR$/yearWiseList.php" />
         <option value="$PROJECT_DIR$/officeStipend.php" />
@@ -224,18 +171,23 @@
         <option value="$PROJECT_DIR$/assets/css/paper-dashboard.css" />
         <option value="$PROJECT_DIR$/submitOfficeStipend.php" />
         <option value="$PROJECT_DIR$/includes/utilities.php" />
-        <option value="$PROJECT_DIR$/printStipend.php" />
         <option value="$PROJECT_DIR$/ddpcStipend.php" />
         <option value="$PROJECT_DIR$/submitHODStipend.php" />
         <option value="$PROJECT_DIR$/hodStipend.php" />
         <option value="$PROJECT_DIR$/assets/js/table_verdict.js" />
-        <option value="$PROJECT_DIR$/submitDDPCStipend.php" />
-        <option value="$PROJECT_DIR$/js/table_verdict.js" />
-        <option value="$PROJECT_DIR$/studentStipendDDPC.php" />
-        <option value="$PROJECT_DIR$/studentStipendHOD.php" />
         <option value="$PROJECT_DIR$/css/myCss.css" />
-        <option value="$PROJECT_DIR$/includes/notifications.php" />
         <option value="$PROJECT_DIR$/viewStipend.php" />
+        <option value="$PROJECT_DIR$/printStipend.php" />
+        <option value="$PROJECT_DIR$/reports.php" />
+        <option value="$PROJECT_DIR$/getStipendReport.php" />
+        <option value="$PROJECT_DIR$/reportStipend.php" />
+        <option value="$PROJECT_DIR$/studentStipendHOD.php" />
+        <option value="$PROJECT_DIR$/studentStipendDDPC.php" />
+        <option value="$PROJECT_DIR$/includes/notifications.php" />
+        <option value="$PROJECT_DIR$/js/table_verdict.js" />
+        <option value="$PROJECT_DIR$/submitDDPCStipend.php" />
+        <option value="$PROJECT_DIR$/studentStipendSup.php" />
+        <option value="$PROJECT_DIR$/studentStipendOffice.php" />
       </list>
     </option>
   </component>
@@ -323,20 +275,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DDPC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DDPC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -500,98 +438,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/applyDP16.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3320965">
-          <caret line="283" column="21" selection-start-line="283" selection-start-column="16" selection-end-line="283" selection-end-column="21" />
-          <folding>
-            <marker date="1502716354000" expanded="true" signature="142:247" placeholder="Select * fro... examinarpanel" />
-            <marker date="1502716354000" expanded="true" signature="363:491" placeholder="..." />
-            <marker date="1502716354000" expanded="true" signature="517:606" placeholder="SELECT * FRO... studentmaster" />
-            <marker date="1502716354000" expanded="true" signature="712:799" placeholder="SELECT date_... studentregistration" />
-            <marker date="1502716354000" expanded="true" signature="1006:1089" placeholder="SELECT sem_n... studentregistration" />
-            <marker date="1502716354000" expanded="true" signature="1357:1414" placeholder="SELECT membe... members" />
-            <marker date="1502716354000" expanded="true" signature="1654:1710" placeholder="SELECT name faculty" />
-            <marker date="1502716354000" expanded="true" signature="6982:7027" placeholder="SELECT * FRO... faculty" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applyDP15.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3320965">
-          <caret line="334" column="47" selection-start-line="334" selection-start-column="42" selection-end-line="334" selection-end-column="47" />
-          <folding>
-            <marker date="1502716354000" expanded="true" signature="142:260" placeholder="Select * fro... examinarpanel" />
-            <marker date="1502716354000" expanded="true" signature="376:517" placeholder="..." />
-            <marker date="1502716354000" expanded="true" signature="543:632" placeholder="SELECT * FRO... studentmaster" />
-            <marker date="1502716354000" expanded="true" signature="738:825" placeholder="SELECT date_... studentregistration" />
-            <marker date="1502716354000" expanded="true" signature="1032:1115" placeholder="SELECT sem_n... studentregistration" />
-            <marker date="1502716354000" expanded="true" signature="1383:1440" placeholder="SELECT membe... members" />
-            <marker date="1502716354000" expanded="true" signature="1680:1736" placeholder="SELECT name faculty" />
-            <marker date="1502716354000" expanded="true" signature="7559:7580" placeholder="SELECT * FRO... faculty" />
-            <marker date="1502716354000" expanded="true" signature="9570:9715" placeholder="SELECT * FRO... currentsupervisor" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applyDP14.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3320965">
-          <caret line="363" column="47" selection-start-line="363" selection-start-column="42" selection-end-line="363" selection-end-column="47" />
-          <folding>
-            <marker date="1509222830000" expanded="true" signature="58:89" placeholder="SELECT * fro... awarddistribution" />
-            <marker date="1509222830000" expanded="true" signature="324:401" placeholder="SELECT * fro... currentsupervisor" />
-            <marker date="1509222830000" expanded="true" signature="690:763" placeholder="SELECT super... currentsupervisor" />
-            <marker date="1509222830000" expanded="true" signature="1021:1103" placeholder="SELECT * fro... courseregistration" />
-            <marker date="1509222830000" expanded="true" signature="1258:1314" placeholder="SELECT name faculty" />
-            <marker date="1509222830000" expanded="true" signature="1480:1540" placeholder="SELECT * fro... studentprogramdetails" />
-            <marker date="1509222830000" expanded="true" signature="10352:10373" placeholder="SELECT * FRO... faculty" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applyDP13.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3320965">
-          <caret line="452" column="47" selection-start-line="452" selection-start-column="42" selection-end-line="452" selection-end-column="47" />
-          <folding>
-            <marker date="1502716354000" expanded="true" signature="94:125" placeholder="SELECT * fro... awarddistribution" />
-            <marker date="1502716354000" expanded="true" signature="360:437" placeholder="SELECT * fro... currentsupervisor" />
-            <marker date="1502716354000" expanded="true" signature="771:844" placeholder="SELECT super... currentsupervisor" />
-            <marker date="1502716354000" expanded="true" signature="8685:8734" placeholder="SELECT * FRO... faculty" />
-            <marker date="1502716354000" expanded="true" signature="9598:9690" placeholder="SELECT * FRO... currentsupervisor" />
-            <marker date="1502716354000" expanded="true" signature="10631:10701" placeholder="SELECT * FRO... studentmaster" />
-            <marker date="1502716354000" expanded="true" signature="11253:11360" placeholder="SELECT date_... studentregistration" />
-            <marker date="1502716354000" expanded="true" signature="11755:11812" placeholder="SELECT dept_... department" />
-            <marker date="1502716354000" expanded="true" signature="12417:12472" placeholder="SELECT * FRO... currentsupervisor" />
-            <marker date="1502716354000" expanded="true" signature="13006:13055" placeholder="SELECT * FRO... faculty" />
-            <marker date="1502716354000" expanded="true" signature="14184:14261" placeholder="SELECT * FRO... supervisorselection" />
-            <marker date="1502716354000" expanded="true" signature="14523:14593" placeholder="SELECT name studentmaster" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applyDP12.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3320965">
-          <caret line="417" column="47" selection-start-line="417" selection-start-column="42" selection-end-line="417" selection-end-column="47" />
-          <folding>
-            <marker date="1502716354000" expanded="true" signature="126:181" placeholder="SELECT * fro... currentsupervisor" />
-            <marker date="1502716354000" expanded="true" signature="281:431" placeholder="..." />
-            <marker date="1502716354000" expanded="true" signature="451:482" placeholder="SELECT * fro... awarddistribution" />
-            <marker date="1502716354000" expanded="true" signature="717:794" placeholder="SELECT * fro... currentsupervisor" />
-            <marker date="1502716354000" expanded="true" signature="1124:1197" placeholder="SELECT super... currentsupervisor" />
-            <marker date="1502716354000" expanded="true" signature="1455:1537" placeholder="SELECT * fro... courseregistration" />
-            <marker date="1502716354000" expanded="true" signature="10230:10277" placeholder="SELECT * FRO... course" />
-            <marker date="1502716354000" expanded="true" signature="10762:10833" placeholder="SELECT * FRO... department" />
-            <marker date="1502716354000" expanded="true" signature="11173:11220" placeholder="SELECT * FRO... course" />
-            <marker date="1502716354000" expanded="true" signature="11444:11493" placeholder="SELECT * FRO... faculty" />
-            <marker date="1502716354000" expanded="true" signature="12872:12893" placeholder="SELECT * FRO... faculty" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/applyDP11.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3320965">
@@ -770,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/connect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66543436">
-          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adminDashboard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.576923">
@@ -891,42 +730,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studentStipendSup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.7205625">
-          <caret line="162" column="33" selection-start-line="162" selection-start-column="33" selection-end-line="162" selection-end-column="33" />
-          <folding>
-            <marker date="1521987473764" expanded="true" signature="397:475" placeholder="SELECT reg_n... currentsupervisor" />
-            <marker date="1521987473764" expanded="true" signature="685:744" placeholder="Select role members" />
-            <marker date="1521987473764" expanded="true" signature="5616:5639" placeholder="SELECT * FRO... stipend" />
-            <marker date="1521987473764" expanded="true" signature="5616:5655" placeholder="SELECT * FRO... stipend" />
-            <marker date="1521987473764" expanded="true" signature="5616:5666" placeholder="SELECT * FRO... stipend" />
-            <marker date="1521987473764" expanded="true" signature="5616:5667" placeholder="SELECT * FRO... stipend" />
-            <marker date="1521987473764" expanded="true" signature="5616:5787" placeholder="SELECT * FRO... stipend" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/topleft.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923">
           <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <marker date="1524163741160" expanded="true" signature="663:738" placeholder="SELECT * FRO... studentmaster" />
-            <marker date="1524163741160" expanded="true" signature="947:996" placeholder="SELECT * FRO... members" />
-            <marker date="1524163741160" expanded="true" signature="1237:1310" placeholder="SELECT * FRO... faculty" />
-            <marker date="1524163741160" expanded="true" signature="1419:1466" placeholder="SELECT * FRO... members" />
-            <marker date="1524163741160" expanded="true" signature="1872:1935" placeholder="SELECT * FRO... currentsupervisor" />
-            <marker date="1524163741160" expanded="true" signature="2467:2530" placeholder="SELECT * FRO... currentsupervisor" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -965,25 +773,6 @@
         <state vertical-scroll-proportion="0.45925927">
           <caret line="1251" column="27" selection-start-line="1251" selection-start-column="27" selection-end-line="1251" selection-end-column="27" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/utilities.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4150944">
-          <caret line="20" column="146" selection-start-line="20" selection-start-column="146" selection-end-line="20" selection-end-column="146" />
-          <folding>
-            <marker date="1524224706470" expanded="true" signature="82:137" placeholder="SELECT name studentmaster" />
-            <marker date="1524224706470" expanded="true" signature="322:378" placeholder="SELECT name faculty" />
-            <marker date="1524224706470" expanded="true" signature="612:726" placeholder="SELECT dept_... department" />
-            <marker date="1524224706470" expanded="true" signature="668:725" placeholder="SELECT dept_... studentmaster" />
-            <marker date="1524224706470" expanded="true" signature="989:1046" placeholder="SELECT dept_... department" />
-            <marker date="1524224706470" expanded="true" signature="1309:1377" placeholder="SELECT super... currentsupervisor" />
-            <marker date="1524224706470" expanded="true" signature="1776:1803" placeholder="SELECT * FRO... notifications" />
-            <marker date="1524224706470" expanded="true" signature="2091:2293" placeholder="INSERT INTO notifications... " />
-            <marker date="1524224706470" expanded="true" signature="2678:2761" placeholder="SELECT sem_n... studentregistration" />
-            <marker date="1524224706470" expanded="true" signature="3130:3261" placeholder="SELECT count... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1033,17 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studentStipendOffice.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45342708">
-          <caret line="151" column="114" selection-start-line="151" selection-start-column="114" selection-end-line="151" selection-end-column="114" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-            <marker date="1524164070273" expanded="true" signature="4861:4913" placeholder="SELECT * FRO... stipend" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/submitStipend.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11950791">
@@ -1055,24 +833,6 @@
             <marker date="1522184710542" expanded="true" signature="2795:2822" placeholder="SELECT * FRO... notifications" />
             <marker date="1522184710542" expanded="true" signature="3242:3431" placeholder="INSERT INTO notifications... " />
             <marker date="1522184710542" expanded="true" signature="3508:3652" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/printStipend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4393673">
-          <caret line="128" column="85" selection-start-line="128" selection-start-column="85" selection-end-line="128" selection-end-column="85" />
-          <folding>
-            <marker date="1524234190829" expanded="true" signature="390:443" placeholder="select * fro... stipend" />
-            <marker date="1524234190829" expanded="true" signature="572:636" placeholder="select * fro... stipendstuddetails" />
-            <marker date="1524234190829" expanded="true" signature="4587:4835" placeholder="..." />
-            <marker date="1524234190829" expanded="true" signature="5785:6039" placeholder="..." />
-            <marker date="1524234190829" expanded="true" signature="6207:6457" placeholder="..." />
-            <marker date="1524234190829" expanded="true" signature="14027:14090" placeholder="SELECT * fro... stipendsupdetails" />
-            <marker date="1524234190829" expanded="true" signature="21037:21320" placeholder="SELECT month... " />
-            <marker date="1524234190829" expanded="true" signature="22180:22463" placeholder="SELECT month... " />
-            <marker date="1524234190829" expanded="true" signature="23526:23583" placeholder="select * fro... stipendhod" />
           </folding>
         </state>
       </provider>
@@ -1096,22 +856,6 @@
         <state vertical-scroll-proportion="2.7188048">
           <caret line="91" column="27" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/submitDDPCStipend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.461538">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="82" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-            <marker date="1524235662611" expanded="true" signature="687:744" placeholder="select reg_n... stipend" />
-            <marker date="1524235662611" expanded="true" signature="1045:1134" placeholder="update stipe... " />
-            <marker date="1524235662611" expanded="true" signature="1400:1447" placeholder="Select membe... members" />
-            <marker date="1524235662611" expanded="true" signature="1766:1857" placeholder="update stipe... " />
-            <marker date="1524235662611" expanded="true" signature="2267:2294" placeholder="SELECT * FRO... notifications" />
-            <marker date="1524235662611" expanded="true" signature="2619:2808" placeholder="INSERT INTO notifications... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1147,26 +891,206 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studentStipendHOD.php">
+    <entry file="file://$PROJECT_DIR$/viewStipend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="222" column="42" selection-start-line="222" selection-start-column="42" selection-end-line="222" selection-end-column="42" />
+        <state vertical-scroll-proportion="-0.96153843">
+          <caret line="145" column="125" selection-start-line="145" selection-start-column="125" selection-end-line="145" selection-end-column="125" />
+          <folding>
+            <marker date="1524258964598" expanded="true" signature="5123:5171" placeholder="SELECT * FRO... stipend" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printStipend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-246.5">
+          <caret line="382" column="25" selection-start-line="382" selection-start-column="25" selection-end-line="382" selection-end-column="25" />
+          <folding>
+            <marker date="1524259373072" expanded="true" signature="390:443" placeholder="select * fro... stipend" />
+            <marker date="1524259373072" expanded="true" signature="572:636" placeholder="select * fro... stipendstuddetails" />
+            <marker date="1524259373072" expanded="true" signature="4587:4835" placeholder="..." />
+            <marker date="1524259373072" expanded="true" signature="5785:6039" placeholder="..." />
+            <marker date="1524259373072" expanded="true" signature="6207:6457" placeholder="..." />
+            <marker date="1524259373072" expanded="true" signature="14027:14090" placeholder="SELECT * fro... stipendsupdetails" />
+            <marker date="1524259373072" expanded="true" signature="21037:21320" placeholder="SELECT month... " />
+            <marker date="1524259373072" expanded="true" signature="22180:22463" placeholder="SELECT month... " />
+            <marker date="1524259373072" expanded="true" signature="23526:23583" placeholder="select * fro... stipendhod" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report01.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.059753954">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+          <folding>
+            <marker date="1502716354000" expanded="true" signature="219:275" placeholder="SELECT name faculty" />
+            <marker date="1502716354000" expanded="true" signature="4253:4381" placeholder="SELECT disti... studentmaster" />
+            <marker date="1502716354000" expanded="true" signature="4874:4968" placeholder="SELECT * FRO... studentregistration" />
+            <marker date="1502716354000" expanded="true" signature="5406:5598" placeholder="SELECT * FRO... courseregistration" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/myCss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56766254">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40246046">
+          <caret line="102" column="104" selection-start-line="102" selection-start-column="104" selection-end-line="102" selection-end-column="104" />
+          <folding>
+            <marker date="1524259775559" expanded="true" signature="147:218" placeholder="Select * fro... currentsupervisor" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/utilities.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="20" column="146" selection-start-line="20" selection-start-column="146" selection-end-line="20" selection-end-column="146" />
+          <folding>
+            <marker date="1524224706470" expanded="true" signature="82:137" placeholder="SELECT name studentmaster" />
+            <marker date="1524224706470" expanded="true" signature="322:378" placeholder="SELECT name faculty" />
+            <marker date="1524224706470" expanded="true" signature="612:726" placeholder="SELECT dept_... department" />
+            <marker date="1524224706470" expanded="true" signature="668:725" placeholder="SELECT dept_... studentmaster" />
+            <marker date="1524224706470" expanded="true" signature="989:1046" placeholder="SELECT dept_... department" />
+            <marker date="1524224706470" expanded="true" signature="1309:1377" placeholder="SELECT super... currentsupervisor" />
+            <marker date="1524224706470" expanded="true" signature="1776:1803" placeholder="SELECT * FRO... notifications" />
+            <marker date="1524224706470" expanded="true" signature="2091:2293" placeholder="INSERT INTO notifications... " />
+            <marker date="1524224706470" expanded="true" signature="2678:2761" placeholder="SELECT sem_n... studentregistration" />
+            <marker date="1524224706470" expanded="true" signature="3130:3261" placeholder="SELECT count... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewStudents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="74.23077">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1502716354000" expanded="true" signature="211:286" placeholder="Select reg_n... supervisorhistory" />
+            <marker date="1502716354000" expanded="true" signature="3679:3899" placeholder="select * fro... *" />
+            <marker date="1502716354000" expanded="true" signature="3694:3807" placeholder="select *, mi... studentregistration" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reportStipend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.346154">
+          <caret line="109" column="151" selection-start-line="109" selection-start-column="151" selection-end-line="109" selection-end-column="151" />
           <folding>
             <element signature="e#6#89#0#PHP" expanded="true" />
-            <marker date="1524257461166" expanded="true" signature="5897:5941" placeholder="SELECT * FRO... stipend" />
+            <element signature="n#script#6;n#html#0;n#!!top" expanded="false" />
+            <marker date="1524301587119" expanded="true" signature="6008:6838" placeholder="..." />
+            <marker date="1524301587119" expanded="true" signature="6918:6920" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getStipendReport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.384615">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="true" />
+            <marker date="1524300626127" expanded="true" signature="560:596" placeholder="select * fro... stipend" />
+            <marker date="1524300626127" expanded="true" signature="560:615" placeholder="select * fro... stipend" />
+            <marker date="1524300626127" expanded="true" signature="560:616" placeholder="select * fro... stipend" />
+            <marker date="1524300626127" expanded="true" signature="560:633" placeholder="select * fro... stipend" />
+            <marker date="1524300626127" expanded="true" signature="560:635" placeholder="select * fro... stipend" />
+            <marker date="1524300626127" expanded="true" signature="560:645" placeholder="select * fro... stipend" />
+            <marker date="1524300626127" expanded="true" signature="978:1078" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentStipendHOD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04393673">
+          <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="true" />
+            <marker date="1524303861616" expanded="true" signature="5894:5938" placeholder="SELECT * FRO... stipend" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/notifications.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1353251">
+          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#li#0;n#!!top" expanded="true" />
+            <marker date="1524305263122" expanded="true" signature="516:649" placeholder="SELECT * FRO... notifications" />
+            <marker date="1524305263122" expanded="true" signature="2488:2621" placeholder="SELECT * FRO... notifications" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/submitDDPCStipend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-42.5">
+          <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+          <folding>
+            <marker date="1524305748897" expanded="true" signature="803:860" placeholder="select reg_n... stipend" />
+            <marker date="1524305748897" expanded="true" signature="1119:1208" placeholder="update stipe... " />
+            <marker date="1524305748897" expanded="true" signature="1402:1493" placeholder="update stipe... " />
+            <marker date="1524305748897" expanded="true" signature="1749:1796" placeholder="Select membe... members" />
+            <marker date="1524305748897" expanded="true" signature="2768:2795" placeholder="SELECT * FRO... notifications" />
+            <marker date="1524305748897" expanded="true" signature="3104:3293" placeholder="INSERT INTO notifications... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/studentStipendDDPC.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.181818">
-          <caret line="116" column="135" selection-start-line="106" selection-start-column="64" selection-end-line="116" selection-end-column="135" />
+        <state vertical-scroll-proportion="-138.61539">
+          <caret line="212" column="39" selection-start-line="212" selection-start-column="39" selection-end-line="212" selection-end-column="39" />
           <folding>
             <element signature="e#6#89#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#script#7;n#html#0;n#!!top" expanded="false" />
-            <marker date="1524255735850" expanded="true" signature="6165:6210" placeholder="SELECT * FRO... stipend" />
+            <marker date="1524304747825" expanded="true" signature="6165:6210" placeholder="SELECT * FRO... stipend" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentStipendSup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.230769">
+          <caret line="173" column="205" selection-start-line="173" selection-start-column="120" selection-end-line="173" selection-end-column="205" />
+          <folding>
+            <marker date="1524306387458" expanded="true" signature="397:475" placeholder="SELECT reg_n... currentsupervisor" />
+            <marker date="1524306387458" expanded="true" signature="685:744" placeholder="Select role members" />
+            <marker date="1524306387458" expanded="true" signature="5616:5639" placeholder="SELECT * FRO... stipend" />
+            <marker date="1524306387458" expanded="true" signature="5616:5655" placeholder="SELECT * FRO... stipend" />
+            <marker date="1524306387458" expanded="true" signature="5616:5666" placeholder="SELECT * FRO... stipend" />
+            <marker date="1524306387458" expanded="true" signature="5616:5667" placeholder="SELECT * FRO... stipend" />
+            <marker date="1524306387458" expanded="true" signature="5616:5787" placeholder="SELECT * FRO... stipend" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentStipendOffice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.30769232">
+          <caret line="151" column="189" selection-start-line="151" selection-start-column="189" selection-end-line="151" selection-end-column="189" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="true" />
+            <marker date="1524306446850" expanded="true" signature="4861:4913" placeholder="SELECT * FRO... stipend" />
           </folding>
         </state>
       </provider>
@@ -1174,39 +1098,24 @@
     <entry file="file://$PROJECT_DIR$/js/table_verdict.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="29" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="29" />
+          <caret line="117" column="34" selection-start-line="117" selection-start-column="34" selection-end-line="117" selection-end-column="34" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/myCss.css">
+    <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/notifications.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.963636">
-          <caret line="84" column="51" selection-start-line="84" selection-start-column="51" selection-end-line="84" selection-end-column="51" />
+        <state vertical-scroll-proportion="1.1353251">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#ul#0;n#li#0;n#!!top" expanded="true" />
-            <marker date="1524258666575" expanded="true" signature="516:649" placeholder="SELECT * FRO... notifications" />
-            <marker date="1524258666575" expanded="true" signature="2597:2730" placeholder="SELECT * FRO... notifications" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewStipend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5377856">
-          <caret line="145" column="125" selection-start-line="145" selection-start-column="125" selection-end-line="145" selection-end-column="125" />
-          <folding>
-            <marker date="1524258964598" expanded="true" signature="5123:5171" placeholder="SELECT * FRO... stipend" />
+            <marker date="1524163741160" expanded="true" signature="663:738" placeholder="SELECT * FRO... studentmaster" />
+            <marker date="1524163741160" expanded="true" signature="947:996" placeholder="SELECT * FRO... members" />
+            <marker date="1524163741160" expanded="true" signature="1237:1310" placeholder="SELECT * FRO... faculty" />
+            <marker date="1524163741160" expanded="true" signature="1419:1466" placeholder="SELECT * FRO... members" />
+            <marker date="1524163741160" expanded="true" signature="1872:1935" placeholder="SELECT * FRO... currentsupervisor" />
+            <marker date="1524163741160" expanded="true" signature="2467:2530" placeholder="SELECT * FRO... currentsupervisor" />
           </folding>
         </state>
       </provider>

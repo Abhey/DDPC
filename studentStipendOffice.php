@@ -149,7 +149,7 @@ $prevPageLink = "officeDashboard.php";
                                                                                         </td>
                                                                                         <td>
                                                                                                 <form method="post" action="officeStipend.php">
-                                                                                                        <input type="submit" name="submit" value="Fill">
+                                                                                                        <input type="submit" name="submit" class="btn btn-info btn-fill btn-wd" value="Fill">
                                                                                                         <input type="hidden" name="stipend_id" value="<?php echo $thisApp['stipend_id'] ?>"/>
                                                                                                 </form>
                                                                                         </td>

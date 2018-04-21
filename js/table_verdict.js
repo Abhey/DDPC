@@ -42,6 +42,7 @@
                 'is_single': true
 
             }, function (data, status) {
+                console.log(data);
                 if (data.trim() != '')
                     alert(data);
             })
@@ -65,6 +66,7 @@
                 'is_single': true
 
             }, function (data, status) {
+                console.log(data);
                 if (data.trim() != '')
                     alert(data);
             })
@@ -76,17 +78,19 @@
         $("tbody tr").find("input[type='hidden']").each(function(index,stipend){
                 //getting stipend and change ui
                 var stipend_id = $(stipend).val();
-
                 make_green($(stipend).siblings("input[name='submit-yes']"));
-                //console.log($(stipend).siblings("input[name='submit-yes']"));
+
+                var isStart = (index==0);
+
                 //sending ajax request
                 $.post(ajax_request_url,
                 {
                     'verdict': "approve",
                     'stipend_id': stipend_id,
-                    'is_single': true
-
+                    'is_single': false,
+                    'is_Start': isStart
                 }, function (data, status) {
+                        console.log(data);
                     if (data.trim() != '')
                         alert(data);
                 })
@@ -98,17 +102,20 @@ $("#decline_all").click(function(){
     $("tbody tr").find("input[type='hidden']").each(function(index,stipend){
         //getting stipend and change ui
         var stipend_id = $(stipend).val();
-
         make_red($(stipend).siblings("input[name='submit-no']"));
-        //console.log($(stipend).siblings("input[name='submit-yes']"));
+
+        var isStart = (index==0);
+
         //sending ajax request
         $.post(ajax_request_url,
         {
             'verdict': "decline",
             'stipend_id': stipend_id,
-            'is_single': true
+            'is_single': false,
+            'is_Start': isStart
 
         }, function (data, status) {
+                console.log(data);
             if (data.trim() != '')
                 alert(data);
         })

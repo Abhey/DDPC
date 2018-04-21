@@ -380,6 +380,6 @@ $studResult = mysqli_fetch_assoc($studResult);
                                 </div>
                 </div>
         </div>
-
+<script>window.print();</script>
 </body>
 </html>

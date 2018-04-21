@@ -100,7 +100,7 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 								<li><a href="supervisorWiseList.php"> Supervisor Wise List of Students </a></li>
 
 								<li><a href="report01.php"> Course Details of All Registered Students </a></li>
-
+								<li><a href="reportStipend.php"> Stipend Details of All Registered Students </a></li>
 								<li><a href="report02.php"> Program Details of All Registered Students </a></li>
 								<li><a href="yearWiseList.php"> Year Wise List of registered Students </a></li>
 								<li><a href="viewStudents.php?from_year=2005&to_year=<?php echo date("Y"); ?>"> View All Students </a></li>
