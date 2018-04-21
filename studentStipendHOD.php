@@ -8,7 +8,7 @@
 
 
 include("./includes/preProcess.php");
-allow_access("HOD");
+allow_access("ChairmanSDPC");
 
 $nextNotifTo = "";
 $ddpc_id = $_SESSION['reg_no'];

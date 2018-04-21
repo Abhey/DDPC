@@ -8,7 +8,7 @@
 
 
 include("./includes/preProcess.php");
-allow_access("HOD");
+allow_access("ChaimanSDPC");
 require_once ("./includes/utilities.php");
 $prevPageLink = "studentStipendHOD.php";
 $hod_id = $_SESSION['reg_no'];

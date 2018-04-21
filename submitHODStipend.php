@@ -9,7 +9,7 @@
 
 session_start();
 include("./includes/preProcess.php");
-allow_access("HOD");
+allow_access("ChairmanSDPC");
 if(!isset($_SESSION['reg_no']))
 {
         header("location: ./");

@@ -7,7 +7,7 @@
  */
 
 include("./includes/preProcess.php");
-allow_access("HOD");
+allow_access("ChairmanSDPC");
 require_once ("./includes/utilities.php");
 $prevPageLink = "reports.php";
 $supervisor_id = $_SESSION['reg_no'];
@@ -105,7 +105,7 @@ $supervisor_id = $_SESSION['reg_no'];
                                                                 <p class="category">Details of Students</p>
                                                         </div>
                                                         <form class="form">
-                                                                <div class="form-group col-md-offset-3 col-md-1" >
+                                                                <div class="form-group col-md-offset-3 col-md-2" >
                                                                         <select id="month" class="form-control border-input">
                                                                                 <?php for($i=1;$i<=12;$i++) { ?>
                                                                                         <option value="<?=$i?>" <?php if(date('m')==$i) echo "selected"?> ><?=$i?></option>
