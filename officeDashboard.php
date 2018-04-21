@@ -6,9 +6,17 @@
  * Time: 11:45 PM
  */
 
+/**
+ *
+ * This is the dashboard of DDPC Office. It needs some content...
+ */
+
 require_once ("includes/preProcess.php");
+allow_access("ddpcoffice");
 
 ?>
+
+
 
 <!doctype html>
 <html lang="en">

@@ -6,7 +6,12 @@
  * Time: 7:41 PM
  */
 
+/**
+ * This file will display list of all student who have applied for stipend whose progress is "ddpcoffice" and button to fill its details
+ */
+
 include("./includes/preProcess.php");
+allow_access("ddpcoffice");
 $nextNotifTo = "";
 $id = $_SESSION['reg_no'];
 $prevPageLink = "officeDashboard.php";

@@ -114,4 +114,3 @@ else
 {
 	header("location: 404error.html");
 }
-?>

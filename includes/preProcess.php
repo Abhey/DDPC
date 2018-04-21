@@ -78,5 +78,12 @@ else if(! strcmp($_SESSION['role'], "student"))
 
     $escaped_url = htmlspecialchars( $url, ENT_QUOTES, 'UTF-8' ); 
 }
-?>
+
+
+function allow_access($role)
+{
+    if($_SESSION['role'] != $role)
+        die("<h3>Unauthorized Access!!You shall be reported.</h3>");
+}
+
 

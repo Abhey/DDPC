@@ -8,6 +8,8 @@
 
 
 session_start();
+include("./includes/preProcess.php");
+allow_access("HOD");
 if(!isset($_SESSION['reg_no']))
 {
         header("location: ./");

@@ -8,6 +8,7 @@
 
 
 include("./includes/preProcess.php");
+allow_access("ConvenerDDPC");
 require_once ("./includes/utilities.php");
 $prevPageLink = "studentStipendHOD.php";
 $hod_id = $_SESSION['reg_no'];

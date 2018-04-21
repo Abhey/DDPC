@@ -9,6 +9,7 @@
 /** This file is called through ajax request and it returns the list of stipends of that (month,year) */
 
 include("./includes/preProcess.php");
+allow_access("HOD");
 require_once ("./includes/utilities.php");
 $nextNotifTo = "";
 $hod_id = $_SESSION['reg_no'];

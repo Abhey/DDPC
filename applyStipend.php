@@ -5,6 +5,7 @@
  **/
 
 require_once("includes/preProcess.php");
+allow_access("student");
 require_once ("includes/utilities.php");
 $dept = "";
 $prevPageLink = "application.php";

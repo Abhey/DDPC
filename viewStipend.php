@@ -7,6 +7,7 @@
  */
 
                 include("./includes/preProcess.php");
+                allow_access("student");
 		$prevPageLink = "application.php";
 
 	?>

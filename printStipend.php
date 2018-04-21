@@ -11,6 +11,7 @@
  */
 
     include("./includes/preProcess.php");
+    allow_access("student");
     require_once ("./includes/utilities.php");
     date_default_timezone_set("Asia/Kolkata");
 
@@ -21,6 +22,9 @@ $stipendQuery = "select * from stipend where stipend_id = '$stipendID'";
 $stipendResult = mysqli_query($connection,$stipendQuery);
 $stipendResult = mysqli_fetch_assoc($stipendResult);
 
+
+if($stipendResult['reg_no']!= $reg_no)
+        die("<h2>Please don't try this!! You will be reported.</h2>");
 $studQuery = "select * from stipendstuddetails where stipend_id = '$stipendID'";
 $studResult = mysqli_query($connection,$studQuery);
 $studResult = mysqli_fetch_assoc($studResult);

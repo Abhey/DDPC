@@ -6,7 +6,8 @@ The notification is also sent to the supervisors
  **/
 
 
-/*Validation of Lectures, Practical etc remaining and also null testing remaining moreover url attacks not prevented yet*/
+include ("./includes/preProcess.php");
+allow_access("student");
 
 
 session_start();

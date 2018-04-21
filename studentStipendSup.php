@@ -10,6 +10,7 @@ This file is run when any faculty wants to see any applications to fill.
 It gives list of all application by  students waiting his/her approval.
 This file is only for Supervisor*/
     include("./includes/preProcess.php");
+    allow_access("Supervisor");
     $nextNotifTo = "";
     $supervisor_id = $_SESSION['reg_no'];
     $s_query = "SELECT reg_no from `currentsupervisor` WHERE supervisor1_id = '$supervisor_id'";

@@ -7,10 +7,11 @@
  */
 
 /**
-This file is used for filling faculty and supervisor details
+This file is used for filling details regarding leaves and stipend amount. This is filled by DDPC office
  */
 
 include("./includes/preProcess.php");
+allow_access("ddpcoffice");
 require_once ("./includes/utilities.php");
 $prevPageLink = "studentStipendDDPC.php";
 $ddpc_id = $_SESSION['reg_no'];

@@ -7,10 +7,11 @@
  */
 
 /**
-        This file is used for filling faculty and supervisor details
+        This file is used for filling faculty and supervisor details for forms whose progress is till supervisor
  */
 
-		include("./includes/preProcess.php");
+        include("./includes/preProcess.php");
+        allow_access("Supervisor");
         require_once ("./includes/utilities.php");
 	    $prevPageLink = "studentStipendSup.php";
 	    $supervisor_id = $_SESSION['reg_no'];

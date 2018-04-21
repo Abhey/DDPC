@@ -15,6 +15,8 @@ if(!isset($_SESSION['reg_no']))
 else
         $sup_no = $_SESSION['reg_no'];
 
+require ("./includes/preProcess.php");
+allow_access("ConvenerDDPC");
 
 require("./includes/connect.php");
 require_once ("includes/validFunc.php");

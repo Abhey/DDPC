@@ -11,6 +11,8 @@
  */
 
 session_start();
+include("./includes/preProcess.php");
+allow_access("Supervisor");
 if(!isset($_SESSION['reg_no']))
 {
         header("location: ./");

@@ -8,6 +8,8 @@
 
 
 include("./includes/preProcess.php");
+allow_access("HOD");
+
 $nextNotifTo = "";
 $ddpc_id = $_SESSION['reg_no'];
 $prevPageLink = "fillDetails.php";
